@@ -1,0 +1,31 @@
+ 
+****************************************
+Report : area
+Design : myfir
+Version: S-2021.06-SP4
+Date   : Tue Nov  7 10:35:04 2023
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    NangateOpenCellLibrary (File: /eda/dk/nangate45/synopsys/NangateOpenCellLibrary_typical_ecsm.db)
+
+Number of ports:                         1544
+Number of nets:                         13619
+Number of cells:                        11141
+Number of combinational cells:          10927
+Number of sequential cells:               186
+Number of macros/black boxes:               0
+Number of buf/inv:                       1344
+Number of references:                      55
+
+Combinational area:              17184.398031
+Buf/Inv area:                      765.814003
+Noncombinational area:             959.994020
+Macro/Black Box area:                0.000000
+Net Interconnect area:      undefined  (Wire load has zero net area)
+
+Total cell area:                 18144.392050
+Total area:                 undefined
+1

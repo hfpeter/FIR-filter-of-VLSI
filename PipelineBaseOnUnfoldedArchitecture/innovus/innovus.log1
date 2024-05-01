@@ -1,0 +1,374 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.11-s130_1, built Wed Aug 5 15:53:11 PDT 2020
+Options:	
+Date:		Mon Nov 20 12:37:41 2023
+Host:		isaserver (x86_64 w/Linux 3.10.0-1160.81.1.el7.x86_64) (6cores*6cpus*QEMU Virtual CPU version 2.5+ 16384KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	20.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (64 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+**ERROR: (TCLCMD-989):	cannot open SDC file '/home/isa22_2023_2024/Desktop/yanghaifeng/lab1_pipelineOK/innovus/myfir.SAVE.dat/libs/mmmc/myfir.sdc' for mode 'SDC_layout'
+
+
+ERROR: 
+
+
+    while executing
+"error $catchMsg"
+    (procedure "restoreDesign" line 31)
+
+<CMD> set init_design_netlisttype verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell myfir
+<CMD> set init_verilog ../netlist/myfir.v
+<CMD> set init_lef_file /eda/dk/nangate45/lef/NangateOpenCellLibrary.lef
+<CMD> set init_gnd_net VSS
+<CMD> set init_pwr_net VDD
+<CMD> set init_mmmc_file mmm_design.tcl
+<CMD> init_design
+% Begin Load MMMC data ... (date=11/20 12:43:33, mem=570.2M)
+% End Load MMMC data ... (date=11/20 12:43:34, total cpu=0:00:00.0, real=0:00:00.0, peak res=570.3M, current mem=570.3M)
+my_rc
+
+Loading LEF file /eda/dk/nangate45/lef/NangateOpenCellLibrary.lef ...
+Set DBUPerIGU to M2 pitch 380.
+
+viaInitial starts at Mon Nov 20 12:43:34 2023
+viaInitial ends at Mon Nov 20 12:43:34 2023
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from mmm_design.tcl
+Reading MY_LIBSET timing library '/eda/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm.lib' ...
+Read 134 cells in library 'NangateOpenCellLibrary' 
+*** End library_loading (cpu=0.04min, real=0.05min, mem=10.0M, fe_cpu=1.02min, fe_real=5.93min, fe_mem=781.9M) ***
+% Begin Load netlist data ... (date=11/20 12:43:37, mem=584.2M)
+*** Begin netlist parsing (mem=781.9M) ***
+Created 134 new cells from 1 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../netlist/myfir.v'
+
+*** Memory Usage v#2 (Current mem = 782.934M, initial mem = 272.285M) ***
+*** End netlist parsing (cpu=0:00:00.2, real=0:00:00.0, mem=782.9M) ***
+% End Load netlist data ... (date=11/20 12:43:37, total cpu=0:00:00.2, real=0:00:00.0, peak res=591.7M, current mem=591.7M)
+Set top cell to myfir.
+Hooked 134 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell myfir ...
+*** Netlist is unique.
+** info: there are 138 modules.
+** info: there are 9787 stdCell insts.
+
+*** Memory Usage v#2 (Current mem = 828.859M, initial mem = 272.285M) ***
+*info: set bottom ioPad orient R0
+Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+*Info: initialize multi-corner CTS.
+Total number of combinational cells: 99
+Total number of sequential cells: 29
+Total number of tristate cells: 6
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUF_X1 BUF_X2 BUF_X4 BUF_X8 BUF_X16 BUF_X32 CLKBUF_X1 CLKBUF_X2 CLKBUF_X3
+Total number of usable buffers: 9
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INV_X1 INV_X2 INV_X4 INV_X8 INV_X16 INV_X32
+Total number of usable inverters: 6
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells:
+Total number of identified usable delay cells: 0
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+% Begin Load MMMC data ... (date=11/20 12:43:41, mem=821.8M)
+% End Load MMMC data ... (date=11/20 12:43:41, total cpu=0:00:00.0, real=0:00:00.0, peak res=821.8M, current mem=821.8M)
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+
+
+ERROR: **ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+
+
+**ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+
+    while executing
+"error $catchMsg"
+    (procedure "restoreDesign" line 31)
+
+**ERROR: (IMPSYT-6300):	Failed to execute command 'source'. For more details, refer to error message: **ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+
+<CMD> set_power_analysis_mode -reset
+<CMD> set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+<CMD> set_power_output_dir -reset
+<CMD> set_power_output_dir ./tb_fir/UUT
+<CMD> set_default_switching_activity -reset
+<CMD> set_default_switching_activity -input_activity 0.2 -period 10.0
+** INFO:  (VOLTUS_POWR-3229): Using user defined default frequency 100MHz for power calculation.
+
+'set_default_switching_activity' finished successfully.
+<CMD> read_activity_file -reset
+<CMD> read_activity_file -format VCD -scope /tb -start {} -end {} -block {} ../vcd/design.vcd
+
+Power Net Detected:
+        Voltage	    Name
+             0V	    VSS
+           1.1V	    VDD
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: myfir
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+             0V	    VSS
+           1.1V	    VDD
+
+Warning:
+  There are 2 power/gnd nets that are not connected
+VSS VDD ...
+Use 'globalNetConnect' to define rail connections.
+[PowermeterNetlistLib::InfoMergingRails]
+** WARN:  (VOLTUS_POWR-2035): There are 2 power/gnd nets that are not connected
+VSS VDD ...
+Use 'globalNetConnect' to define rail connections.
+
+
+Parsing VCD file ../vcd/design.vcd
+
+Starting Reading VCD variables
+2023-Nov-20 12:46:14 (2023-Nov-20 11:46:14 GMT)
+
+Finished Reading VCD variables
+2023-Nov-20 12:46:14 (2023-Nov-20 11:46:14 GMT)
+   
+The vcd command required:
+   		0.25 user, 0.04 system, and 0.56 real seconds
+
+   Total number of value changes: 0.
+
+   Total simulation time: 5.67e-07s.
+
+   With this vcd command,  0 value changes and 5.67e-07 second simulation
+time were counted for power consumption calculation.
+
+  Filename (activity)                    : ../vcd/design.vcd
+  Names in file that matched to design   : 0/0
+  Annotation coverage for this file
+   (Unique nets matched/Total nets)       : 0/11468 = 0%
+
+
+  Total annotation coverage for all files of type VCD: 0/11468 = 0%
+  Percent of VCD annotated nets with zero toggles: 0/11468 = 0%
+
+'read_activity_file' finished successfully.
+<CMD> set_power -reset
+<CMD> set_powerup_analysis -reset
+<CMD> set_dynamic_power_simulation -reset
+<CMD> report_power -rail_analysis_format VS -outfile ./tb_fir/UUT/myfir.rpt
+Using Power View: MyAnView.
+AAE DB initialization (MEM=1124.85 CPU=0:00:00.0 REAL=0:00:00.0) 
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: myfir
+# Design Mode: 90nm
+# Analysis Mode: MMMC Non-OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+Calculate delays in Single mode...
+Start delay calculation (fullDC) (1 T). (MEM=1124.85)
+Updating RC grid for preRoute extraction ...
+siFlow : Timing analysis mode is single, using late cdB files
+Total number of fetched objects 11852
+End delay calculation. (MEM=1162.98 CPU=0:00:06.3 REAL=0:00:10.0)
+End delay calculation (fullDC). (MEM=1135.9 CPU=0:00:07.2 REAL=0:00:11.0)
+
+Begin Power Analysis
+
+             0V	    VSS
+           1.1V	    VDD
+
+Warning:
+  There are 2 power/gnd nets that are not connected
+VSS VDD ...
+Use 'globalNetConnect' to define rail connections.
+[PowermeterNetlistLib::InfoMergingRails]
+** WARN:  (VOLTUS_POWR-2035): There are 2 power/gnd nets that are not connected
+VSS VDD ...
+Use 'globalNetConnect' to define rail connections.
+
+
+Begin Processing Timing Library for Power Calculation
+
+Begin Processing Timing Library for Power Calculation
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=911.96MB/2275.54MB/914.04MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=911.98MB/2275.54MB/914.04MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=911.98MB/2275.54MB/914.04MB)
+
+Begin Processing Signal Activity
+
+
+Starting Levelizing
+2023-Nov-20 12:46:31 (2023-Nov-20 11:46:31 GMT)
+2023-Nov-20 12:46:31 (2023-Nov-20 11:46:31 GMT): 10%
+2023-Nov-20 12:46:31 (2023-Nov-20 11:46:31 GMT): 20%
+2023-Nov-20 12:46:31 (2023-Nov-20 11:46:31 GMT): 30%
+2023-Nov-20 12:46:31 (2023-Nov-20 11:46:31 GMT): 40%
+2023-Nov-20 12:46:31 (2023-Nov-20 11:46:31 GMT): 50%
+2023-Nov-20 12:46:31 (2023-Nov-20 11:46:31 GMT): 60%
+2023-Nov-20 12:46:31 (2023-Nov-20 11:46:31 GMT): 70%
+2023-Nov-20 12:46:31 (2023-Nov-20 11:46:31 GMT): 80%
+2023-Nov-20 12:46:31 (2023-Nov-20 11:46:31 GMT): 90%
+
+Finished Levelizing
+2023-Nov-20 12:46:31 (2023-Nov-20 11:46:31 GMT)
+
+Starting Activity Propagation
+2023-Nov-20 12:46:31 (2023-Nov-20 11:46:31 GMT)
+2023-Nov-20 12:46:32 (2023-Nov-20 11:46:32 GMT): 10%
+2023-Nov-20 12:46:32 (2023-Nov-20 11:46:32 GMT): 20%
+2023-Nov-20 12:46:32 (2023-Nov-20 11:46:32 GMT): 30%
+
+Finished Activity Propagation
+2023-Nov-20 12:46:32 (2023-Nov-20 11:46:32 GMT)
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=912.19MB/2275.54MB/914.04MB)
+
+Begin Power Computation
+
+      ----------------------------------------------------------
+      # of cell(s) missing both power/leakage table: 0
+      # of cell(s) missing power table: 0
+      # of cell(s) missing leakage table: 0
+      # of MSMV cell(s) missing power_level: 0
+      ----------------------------------------------------------
+
+
+
+Starting Calculating power
+2023-Nov-20 12:46:32 (2023-Nov-20 11:46:32 GMT)
+ ... Calculating switching power
+  Cannot locate supply power rail for net 'DOUT3k[11]' of instance
+DOUT3k_reg_11_
+  Cannot locate supply power rail for net 'DOUT3k[10]' of instance
+DOUT3k_reg_10_
+  Cannot locate supply power rail for net 'DOUT3k[9]' of instance
+DOUT3k_reg_9_
+  Cannot locate supply power rail for net 'DOUT3k[8]' of instance
+DOUT3k_reg_8_
+  Cannot locate supply power rail for net 'DOUT3k[7]' of instance
+DOUT3k_reg_7_
+  only first five unconnected nets are listed...
+2023-Nov-20 12:46:32 (2023-Nov-20 11:46:32 GMT): 10%
+2023-Nov-20 12:46:33 (2023-Nov-20 11:46:33 GMT): 20%
+2023-Nov-20 12:46:33 (2023-Nov-20 11:46:33 GMT): 30%
+2023-Nov-20 12:46:33 (2023-Nov-20 11:46:33 GMT): 40%
+2023-Nov-20 12:46:33 (2023-Nov-20 11:46:33 GMT): 50%
+ ... Calculating internal and leakage power
+2023-Nov-20 12:46:34 (2023-Nov-20 11:46:34 GMT): 60%
+2023-Nov-20 12:46:35 (2023-Nov-20 11:46:35 GMT): 70%
+2023-Nov-20 12:46:37 (2023-Nov-20 11:46:37 GMT): 80%
+2023-Nov-20 12:46:38 (2023-Nov-20 11:46:38 GMT): 90%
+
+Finished Calculating power
+2023-Nov-20 12:46:39 (2023-Nov-20 11:46:39 GMT)
+Ended Power Computation: (cpu=0:00:03, real=0:00:07, mem(process/total/peak)=912.69MB/2275.54MB/914.04MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=912.69MB/2275.54MB/914.04MB)
+
+Ended Power Analysis: (cpu=0:00:04, real=0:00:09, mem(process/total/peak)=912.76MB/2275.54MB/914.04MB)
+
+Begin Boundary Leakage Calculation
+Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=912.77MB/2275.54MB/914.04MB)
+Begin Static Power Report Generation
+*
+
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:        1.17152031 	   48.9165%
+Total Switching Power:       0.84479730 	   35.2743%
+Total Leakage Power:         0.37862251 	   15.8093%
+Total Power:                 2.39494011
+-----------------------------------------------------------------------------------------
+** WARN:  (VOLTUS_POWR-2041): There are some instances in the design which are not connected to any power or ground nets.
+These instances will be added to default power/ground rail uti files.
+Use 'itaputil list <uti-file>' command to get the list of instances.
+
+Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:01,
+mem(process/total/peak)=913.19MB/2275.54MB/914.04MB)
+
+Begin Creating Binary Database
+Ended Creating Binary Database: (cpu=0:00:02, real=0:00:06,
+mem(process/total/peak)=1426.87MB/3042.96MB/1426.88MB)
+
+Output file is ./tb_fir/UUT/myfir.rpt.
+<CMD> report_power -outfile POWERd2 -sort { total }
+Using Power View: MyAnView.
+Begin Boundary Leakage Calculation
+Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=1428.28MB/3044.29MB/1428.28MB)
+Begin Static Power Report Generation
+*
+
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:        1.17152031 	   48.9165%
+Total Switching Power:       0.84479730 	   35.2743%
+Total Leakage Power:         0.37862251 	   15.8093%
+Total Power:                 2.39494011
+-----------------------------------------------------------------------------------------
+Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=1429.39MB/3044.29MB/1429.40MB)
+
+
+Output file is ./tb_fir/UUT/POWERd2.
+<CMD> win off

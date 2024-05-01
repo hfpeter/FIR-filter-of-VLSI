@@ -1,0 +1,90 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : myfir
+Version: S-2021.06-SP4
+Date   : Tue Nov 21 13:13:10 2023
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: din3k1[2] (input port clocked by clk)
+  Endpoint: stmp_reg[9][22]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  myfir              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  din3k1[2] (in)                                          0.00       0.50 f
+  mult_80/a[2] (myfir_DW_mult_tc_17)                      0.00       0.50 f
+  mult_80/U383/Z (XOR2_X1)                                0.08       0.58 f
+  mult_80/U464/ZN (NAND2_X1)                              0.03       0.61 r
+  mult_80/U374/Z (BUF_X1)                                 0.04       0.65 r
+  mult_80/U518/ZN (OAI22_X1)                              0.04       0.68 f
+  mult_80/U81/S (HA_X1)                                   0.08       0.76 f
+  mult_80/U404/ZN (INV_X1)                                0.04       0.79 r
+  mult_80/U470/ZN (OAI222_X1)                             0.05       0.84 f
+  mult_80/U441/ZN (NAND2_X1)                              0.04       0.88 r
+  mult_80/U327/ZN (NAND3_X1)                              0.04       0.92 f
+  mult_80/U395/ZN (NAND2_X1)                              0.03       0.94 r
+  mult_80/U334/ZN (AND3_X1)                               0.05       0.99 r
+  mult_80/U392/ZN (OR2_X1)                                0.03       1.03 r
+  mult_80/U356/ZN (AND3_X1)                               0.05       1.08 r
+  mult_80/U402/ZN (OAI222_X1)                             0.04       1.12 f
+  mult_80/U400/ZN (INV_X1)                                0.04       1.16 r
+  mult_80/U401/ZN (OAI222_X1)                             0.05       1.21 f
+  mult_80/U435/ZN (NAND2_X1)                              0.04       1.25 r
+  mult_80/U367/ZN (AND3_X1)                               0.05       1.30 r
+  mult_80/U429/ZN (OAI222_X1)                             0.04       1.35 f
+  mult_80/U428/ZN (INV_X1)                                0.03       1.38 r
+  mult_80/U430/ZN (OAI222_X1)                             0.05       1.44 f
+  mult_80/U363/ZN (NAND2_X1)                              0.03       1.47 r
+  mult_80/U365/ZN (AND3_X1)                               0.05       1.52 r
+  mult_80/U358/ZN (OR2_X1)                                0.04       1.56 r
+  mult_80/U360/ZN (NAND3_X1)                              0.04       1.60 f
+  mult_80/U444/ZN (NAND2_X1)                              0.03       1.63 r
+  mult_80/U339/ZN (AND3_X2)                               0.06       1.69 r
+  mult_80/U348/ZN (OAI222_X1)                             0.05       1.73 f
+  mult_80/U352/ZN (NAND2_X1)                              0.03       1.77 r
+  mult_80/U354/ZN (NAND3_X1)                              0.04       1.80 f
+  mult_80/U9/CO (FA_X1)                                   0.10       1.90 f
+  mult_80/U388/ZN (NAND2_X1)                              0.04       1.94 r
+  mult_80/U391/ZN (NAND3_X1)                              0.04       1.98 f
+  mult_80/U411/ZN (NAND2_X1)                              0.04       2.01 r
+  mult_80/U406/ZN (NAND3_X1)                              0.04       2.05 f
+  mult_80/U418/ZN (NAND2_X1)                              0.04       2.09 r
+  mult_80/U342/ZN (NAND3_X1)                              0.04       2.12 f
+  mult_80/U425/ZN (NAND2_X1)                              0.03       2.15 r
+  mult_80/U426/ZN (NAND3_X1)                              0.03       2.18 f
+  mult_80/U399/ZN (XNOR2_X1)                              0.06       2.24 f
+  mult_80/U487/ZN (XNOR2_X1)                              0.05       2.29 f
+  mult_80/product[22] (myfir_DW_mult_tc_17)               0.00       2.29 f
+  stmp_reg[9][22]/D (DFFR_X1)                             0.01       2.30 f
+  data arrival time                                                  2.30
+
+  clock clk (rise edge)                                   2.40       2.40
+  clock network delay (ideal)                             0.00       2.40
+  clock uncertainty                                      -0.07       2.33
+  stmp_reg[9][22]/CK (DFFR_X1)                            0.00       2.33 r
+  library setup time                                     -0.04       2.29
+  data required time                                                 2.29
+  --------------------------------------------------------------------------
+  data required time                                                 2.29
+  data arrival time                                                 -2.30
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.02
+
+
+1

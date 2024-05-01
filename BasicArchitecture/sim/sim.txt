@@ -1,0 +1,9 @@
+cd D:/isa_lab/lab1/ISA_lab1_group22/ISA_lab1_group22/BasicArchitecture/sim
+vlog -reportprogress 300 -work work  D:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/nangate45/verilog/NangateOpenCellLibrary.v
+vsim -gui -t ns work.tb_fir
+
+cd D:/isa_lab/lab1/ISA_lab1_group22/ISA_lab1_group22/PipelineBaseOnUnfoldedArchitecture/sim
+
+cd D:/isa_lab/lab1/ISA_lab1_group22/UnfoldedArchitecture/sim
+
+vsim -gui -t ns work.tb_filter

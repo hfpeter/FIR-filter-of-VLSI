@@ -1,0 +1,92 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : myfir
+Version: S-2021.06-SP4
+Date   : Tue Nov  7 10:16:49 2023
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: B3[0] (input port clocked by clk)
+  Endpoint: sum_arr_reg[0][22]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  myfir              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  B3[0] (in)                                              0.00       0.50 f
+  mult_71_4/b[0] (myfir_DW_mult_tc_23)                    0.00       0.50 f
+  mult_71_4/U334/ZN (INV_X2)                              0.06       0.56 r
+  mult_71_4/U417/ZN (INV_X1)                              0.05       0.60 f
+  mult_71_4/U349/ZN (NOR3_X1)                             0.06       0.66 r
+  mult_71_4/U345/ZN (OR2_X1)                              0.04       0.71 r
+  mult_71_4/U369/Z (XOR2_X1)                              0.09       0.80 r
+  mult_71_4/U604/ZN (XNOR2_X1)                            0.07       0.87 r
+  mult_71_4/U586/ZN (OAI222_X1)                           0.06       0.93 f
+  mult_71_4/U630/ZN (NAND2_X1)                            0.04       0.97 r
+  mult_71_4/U329/ZN (NAND3_X1)                            0.04       1.01 f
+  mult_71_4/U584/ZN (NAND2_X1)                            0.03       1.03 r
+  mult_71_4/U320/ZN (AND3_X1)                             0.06       1.09 r
+  mult_71_4/U587/ZN (OAI222_X1)                           0.05       1.14 f
+  mult_71_4/U628/ZN (NAND2_X1)                            0.03       1.18 r
+  mult_71_4/U322/ZN (AND3_X1)                             0.06       1.23 r
+  mult_71_4/U620/ZN (OAI222_X1)                           0.05       1.28 f
+  mult_71_4/U614/ZN (INV_X1)                              0.03       1.32 r
+  mult_71_4/U616/ZN (OAI222_X1)                           0.05       1.37 f
+  mult_71_4/U626/ZN (NAND2_X1)                            0.03       1.40 r
+  mult_71_4/U372/ZN (AND3_X1)                             0.05       1.45 r
+  mult_71_4/U359/ZN (OR2_X1)                              0.03       1.49 r
+  mult_71_4/U356/ZN (NAND3_X1)                            0.04       1.53 f
+  mult_71_4/U624/ZN (NAND2_X1)                            0.03       1.56 r
+  mult_71_4/U370/ZN (AND3_X1)                             0.05       1.61 r
+  mult_71_4/U354/ZN (OR2_X1)                              0.04       1.65 r
+  mult_71_4/U340/ZN (NAND3_X1)                            0.04       1.69 f
+  mult_71_4/U622/ZN (NAND2_X1)                            0.04       1.73 r
+  mult_71_4/U346/ZN (NAND3_X1)                            0.04       1.77 f
+  mult_71_4/U618/ZN (NAND2_X1)                            0.03       1.80 r
+  mult_71_4/U331/ZN (NAND3_X1)                            0.04       1.85 f
+  mult_71_4/U612/ZN (NAND2_X1)                            0.03       1.88 r
+  mult_71_4/U337/ZN (NAND3_X1)                            0.03       1.91 f
+  mult_71_4/U7/S (FA_X1)                                  0.11       2.02 f
+  mult_71_4/product[19] (myfir_DW_mult_tc_23)             0.00       2.02 f
+  add_7_root_add_0_root_add_71_8/U1_19/CO (FA_X1)         0.10       2.13 f
+  add_7_root_add_0_root_add_71_8/U1_20/CO (FA_X1)         0.09       2.22 f
+  add_7_root_add_0_root_add_71_8/U1_21/CO (FA_X1)         0.09       2.31 f
+  add_7_root_add_0_root_add_71_8/U1_22/S (FA_X1)          0.14       2.44 r
+  add_2_root_add_0_root_add_71_8/U1_22/S (FA_X1)          0.12       2.57 f
+  add_1_root_add_0_root_add_71_8/U1_22/S (FA_X1)          0.15       2.71 r
+  U1515/ZN (XNOR2_X1)                                     0.06       2.77 r
+  U1514/ZN (XNOR2_X1)                                     0.06       2.83 r
+  U2090/ZN (NAND2_X1)                                     0.03       2.86 f
+  U1555/ZN (NAND2_X1)                                     0.03       2.89 r
+  sum_arr_reg[0][22]/D (DFFR_X1)                          0.01       2.90 r
+  data arrival time                                                  2.90
+
+  clock clk (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  clock uncertainty                                      -0.07       2.93
+  sum_arr_reg[0][22]/CK (DFFR_X1)                         0.00       2.93 r
+  library setup time                                     -0.03       2.90
+  data required time                                                 2.90
+  --------------------------------------------------------------------------
+  data required time                                                 2.90
+  data arrival time                                                 -2.90
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

@@ -1,0 +1,315 @@
+[11/20 12:37:41      0s] 
+[11/20 12:37:41      0s] Cadence Innovus(TM) Implementation System.
+[11/20 12:37:41      0s] Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+[11/20 12:37:41      0s] 
+[11/20 12:37:41      0s] Version:	v20.11-s130_1, built Wed Aug 5 15:53:11 PDT 2020
+[11/20 12:37:41      0s] Options:	
+[11/20 12:37:41      0s] Date:		Mon Nov 20 12:37:41 2023
+[11/20 12:37:41      0s] Host:		isaserver (x86_64 w/Linux 3.10.0-1160.81.1.el7.x86_64) (6cores*6cpus*QEMU Virtual CPU version 2.5+ 16384KB)
+[11/20 12:37:41      0s] OS:		CentOS Linux release 7.9.2009 (Core)
+[11/20 12:37:41      0s] 
+[11/20 12:37:41      0s] License:
+[11/20 12:37:42      0s] 		invs	Innovus Implementation System	20.1	checkout succeeded
+[11/20 12:37:42      0s] 		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+[11/20 12:38:58     32s] @(#)CDS: Innovus v20.11-s130_1 (64bit) 08/05/2020 15:53 (Linux 2.6.32-431.11.2.el6.x86_64)
+[11/20 12:38:58     32s] @(#)CDS: NanoRoute 20.11-s130_1 NR200802-2257/20_11-UB (database version 18.20.512) {superthreading v2.9}
+[11/20 12:38:58     32s] @(#)CDS: AAE 20.11-s008 (64bit) 08/05/2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[11/20 12:38:58     32s] @(#)CDS: CTE 20.11-s059_1 () Aug  2 2020 05:46:30 ( )
+[11/20 12:38:58     32s] @(#)CDS: SYNTECH 20.11-s028_1 () Aug  1 2020 06:14:27 ( )
+[11/20 12:38:58     32s] @(#)CDS: CPE v20.11-s013
+[11/20 12:38:58     32s] @(#)CDS: IQuantus/TQuantus 19.1.3-s260 (64bit) Thu May 28 10:57:28 PDT 2020 (Linux 2.6.32-431.11.2.el6.x86_64)
+[11/20 12:38:58     32s] @(#)CDS: OA 22.60-s011 Tue Jun 16 12:27:00 2020
+[11/20 12:38:58     32s] @(#)CDS: SGN 20.10-d001 (01-Jun-2020) (64 bit executable, Qt5.9.0)
+[11/20 12:38:58     32s] @(#)CDS: RCDB 11.15.0
+[11/20 12:38:58     32s] @(#)CDS: STYLUS 20.10-p011_1 (06/03/2020 04:47 PDT)
+[11/20 12:38:58     32s] Create and set the environment variable TMPDIR to /tmp/innovus_temp_16172_isaserver_isa22_2023_2024_kR2FCN.
+
+[11/20 12:38:58     32s] Change the soft stacksize limit to 0.2%RAM (64 mbytes). Set global soft_stack_size_limit to change the value.
+[11/20 12:39:04     34s] 
+[11/20 12:39:04     34s] **INFO:  MMMC transition support version v31-84 
+[11/20 12:39:04     34s] 
+[11/20 12:39:04     34s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[11/20 12:39:04     34s] <CMD> suppressMessage ENCEXT-2799
+[11/20 12:39:05     35s] <CMD> win
+[11/20 12:42:08     49s] <CMD> encMessage warning 0
+[11/20 12:42:08     49s] Suppress "**WARN ..." messages.
+[11/20 12:42:08     49s] <CMD> encMessage debug 0
+[11/20 12:42:08     49s] <CMD> encMessage info 0
+[11/20 12:42:10     50s] **ERROR: (TCLCMD-989):	cannot open SDC file '/home/isa22_2023_2024/Desktop/yanghaifeng/lab1_pipelineOK/innovus/myfir.SAVE.dat/libs/mmmc/myfir.sdc' for mode 'SDC_layout'
+
+[11/20 12:42:10     50s] 
+[11/20 12:42:10     50s] ERROR: 
+[11/20 12:42:10     50s] 
+[11/20 12:42:10     50s] 
+[11/20 12:42:10     50s]     while executing
+[11/20 12:42:10     50s] "error $catchMsg"
+[11/20 12:42:10     50s]     (procedure "restoreDesign" line 31)
+[11/20 12:42:10     50s] 
+[11/20 12:43:22     57s] <CMD> set init_design_netlisttype verilog
+[11/20 12:43:22     57s] <CMD> set init_design_settop 1
+[11/20 12:43:22     57s] <CMD> set init_top_cell myfir
+[11/20 12:43:22     57s] <CMD> set init_verilog ../netlist/myfir.v
+[11/20 12:43:22     57s] <CMD> set init_lef_file /eda/dk/nangate45/lef/NangateOpenCellLibrary.lef
+[11/20 12:43:22     57s] <CMD> set init_gnd_net VSS
+[11/20 12:43:22     57s] <CMD> set init_pwr_net VDD
+[11/20 12:43:33     58s] <CMD> set init_mmmc_file mmm_design.tcl
+[11/20 12:43:33     58s] <CMD> init_design
+[11/20 12:43:34     58s] % Begin Load MMMC data ... (date=11/20 12:43:33, mem=570.2M)
+[11/20 12:43:34     58s] Extraction setup Delayed 
+[11/20 12:43:34     58s] Extraction setup Delayed 
+[11/20 12:43:34     58s] % End Load MMMC data ... (date=11/20 12:43:34, total cpu=0:00:00.0, real=0:00:00.0, peak res=570.3M, current mem=570.3M)
+[11/20 12:43:34     59s] 
+[11/20 12:43:34     59s] Loading LEF file /eda/dk/nangate45/lef/NangateOpenCellLibrary.lef ...
+[11/20 12:43:34     59s] Set DBUPerIGU to M2 pitch 380.
+[11/20 12:43:34     59s] 
+[11/20 12:43:34     59s] viaInitial starts at Mon Nov 20 12:43:34 2023
+viaInitial ends at Mon Nov 20 12:43:34 2023
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+[11/20 12:43:34     59s] Loading view definition file from mmm_design.tcl
+[11/20 12:43:34     59s] Reading MY_LIBSET timing library '/eda/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm.lib' ...
+[11/20 12:43:37     61s] Read 134 cells in library 'NangateOpenCellLibrary' 
+[11/20 12:43:37     61s] Ending "PreSetAnalysisView" (total cpu=0:00:02.2, real=0:00:03.0, peak res=660.2M, current mem=584.3M)
+[11/20 12:43:37     61s] *** End library_loading (cpu=0.04min, real=0.05min, mem=10.0M, fe_cpu=1.02min, fe_real=5.93min, fe_mem=781.9M) ***
+[11/20 12:43:37     61s] % Begin Load netlist data ... (date=11/20 12:43:37, mem=584.2M)
+[11/20 12:43:37     61s] *** Begin netlist parsing (mem=781.9M) ***
+[11/20 12:43:37     61s] Created 134 new cells from 1 timing libraries.
+[11/20 12:43:37     61s] Reading netlist ...
+[11/20 12:43:37     61s] Backslashed names will retain backslash and a trailing blank character.
+[11/20 12:43:37     61s] Reading verilog netlist '../netlist/myfir.v'
+[11/20 12:43:37     61s] 
+[11/20 12:43:37     61s] *** Memory Usage v#2 (Current mem = 782.934M, initial mem = 272.285M) ***
+[11/20 12:43:37     61s] *** End netlist parsing (cpu=0:00:00.2, real=0:00:00.0, mem=782.9M) ***
+[11/20 12:43:37     61s] % End Load netlist data ... (date=11/20 12:43:37, total cpu=0:00:00.2, real=0:00:00.0, peak res=591.7M, current mem=591.7M)
+[11/20 12:43:37     61s] Set top cell to myfir.
+[11/20 12:43:38     61s] Hooked 134 DB cells to tlib cells.
+[11/20 12:43:38     62s] Ending "BindLib:" (total cpu=0:00:00.1, real=0:00:00.0, peak res=595.8M, current mem=595.8M)
+[11/20 12:43:38     62s] Starting recursive module instantiation check.
+[11/20 12:43:38     62s] No recursion found.
+[11/20 12:43:38     62s] Building hierarchical netlist for Cell myfir ...
+[11/20 12:43:38     62s] *** Netlist is unique.
+[11/20 12:43:38     62s] Setting Std. cell height to 2800 DBU (smallest netlist inst).
+[11/20 12:43:38     62s] ** info: there are 138 modules.
+[11/20 12:43:38     62s] ** info: there are 9787 stdCell insts.
+[11/20 12:43:38     62s] 
+[11/20 12:43:38     62s] *** Memory Usage v#2 (Current mem = 828.859M, initial mem = 272.285M) ***
+[11/20 12:43:38     62s] *info: set bottom ioPad orient R0
+[11/20 12:43:38     62s] Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+[11/20 12:43:38     62s] Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+[11/20 12:43:38     62s] Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+[11/20 12:43:38     62s] Set Default Net Delay as 1000 ps.
+[11/20 12:43:38     62s] Set Default Net Load as 0.5 pF. 
+[11/20 12:43:38     62s] Set Default Input Pin Transition as 0.1 ps.
+[11/20 12:43:40     63s] Extraction setup Delayed 
+[11/20 12:43:40     63s] *Info: initialize multi-corner CTS.
+[11/20 12:43:41     63s] Ending "SetAnalysisView" (total cpu=0:00:00.1, real=0:00:01.0, peak res=822.7M, current mem=617.9M)
+[11/20 12:43:41     63s] Tech dependent Parameter, Build TLibAnalyzer for: cellAreaConsiderPadding
+[11/20 12:43:41     63s] Creating Cell Server ...(0, 1, 1, 1)
+[11/20 12:43:41     63s] Summary for sequential cells identification: 
+[11/20 12:43:41     63s]   Identified SBFF number: 16
+[11/20 12:43:41     63s]   Identified MBFF number: 0
+[11/20 12:43:41     63s]   Identified SB Latch number: 0
+[11/20 12:43:41     63s]   Identified MB Latch number: 0
+[11/20 12:43:41     63s]   Not identified SBFF number: 0
+[11/20 12:43:41     63s]   Not identified MBFF number: 0
+[11/20 12:43:41     63s]   Not identified SB Latch number: 0
+[11/20 12:43:41     63s]   Not identified MB Latch number: 0
+[11/20 12:43:41     63s]   Number of sequential cells which are not FFs: 13
+[11/20 12:43:41     63s] Total number of combinational cells: 99
+[11/20 12:43:41     63s] Total number of sequential cells: 29
+[11/20 12:43:41     63s] Total number of tristate cells: 6
+[11/20 12:43:41     63s] Total number of level shifter cells: 0
+[11/20 12:43:41     63s] Total number of power gating cells: 0
+[11/20 12:43:41     63s] Total number of isolation cells: 0
+[11/20 12:43:41     63s] Total number of power switch cells: 0
+[11/20 12:43:41     63s] Total number of pulse generator cells: 0
+[11/20 12:43:41     63s] Total number of always on buffers: 0
+[11/20 12:43:41     63s] Total number of retention cells: 0
+[11/20 12:43:41     63s] List of usable buffers: BUF_X1 BUF_X2 BUF_X4 BUF_X8 BUF_X16 BUF_X32 CLKBUF_X1 CLKBUF_X2 CLKBUF_X3
+[11/20 12:43:41     63s] Total number of usable buffers: 9
+[11/20 12:43:41     63s] List of unusable buffers:
+[11/20 12:43:41     63s] Total number of unusable buffers: 0
+[11/20 12:43:41     63s] List of usable inverters: INV_X1 INV_X2 INV_X4 INV_X8 INV_X16 INV_X32
+[11/20 12:43:41     63s] Total number of usable inverters: 6
+[11/20 12:43:41     63s] List of unusable inverters:
+[11/20 12:43:41     63s] Total number of unusable inverters: 0
+[11/20 12:43:41     63s] List of identified usable delay cells:
+[11/20 12:43:41     63s] Total number of identified usable delay cells: 0
+[11/20 12:43:41     63s] List of identified unusable delay cells:
+[11/20 12:43:41     63s] Total number of identified unusable delay cells: 0
+[11/20 12:43:41     63s] Creating Cell Server, finished. 
+[11/20 12:43:41     63s] 
+[11/20 12:43:41     63s] No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+[11/20 12:43:41     63s] Deleting Cell Server ...
+[11/20 12:43:41     63s] Ending "Cell type marking" (total cpu=0:00:00.0, real=0:00:00.0, peak res=821.4M, current mem=821.4M)
+[11/20 12:43:41     63s] Creating Cell Server ...(0, 0, 0, 0)
+[11/20 12:43:41     63s] Summary for sequential cells identification: 
+[11/20 12:43:41     63s]   Identified SBFF number: 16
+[11/20 12:43:41     63s]   Identified MBFF number: 0
+[11/20 12:43:41     63s]   Identified SB Latch number: 0
+[11/20 12:43:41     63s]   Identified MB Latch number: 0
+[11/20 12:43:41     63s]   Not identified SBFF number: 0
+[11/20 12:43:41     63s]   Not identified MBFF number: 0
+[11/20 12:43:41     63s]   Not identified SB Latch number: 0
+[11/20 12:43:41     63s]   Not identified MB Latch number: 0
+[11/20 12:43:41     63s]   Number of sequential cells which are not FFs: 13
+[11/20 12:43:41     63s]  Visiting view : MyAnView
+[11/20 12:43:41     63s]    : PowerDomain = none : Weighted F : unweighted  = 10.10 (1.000) with rcCorner = 0
+[11/20 12:43:41     63s]    : PowerDomain = none : Weighted F : unweighted  = 7.80 (1.000) with rcCorner = -1
+[11/20 12:43:41     63s]  Visiting view : MyAnView
+[11/20 12:43:41     63s]    : PowerDomain = none : Weighted F : unweighted  = 10.10 (1.000) with rcCorner = 0
+[11/20 12:43:41     63s]    : PowerDomain = none : Weighted F : unweighted  = 7.80 (1.000) with rcCorner = -1
+[11/20 12:43:41     63s]  Setting StdDelay to 10.10
+[11/20 12:43:41     63s] Creating Cell Server, finished. 
+[11/20 12:43:41     63s] 
+[11/20 12:43:41     63s] % Begin Load MMMC data ... (date=11/20 12:43:41, mem=821.8M)
+[11/20 12:43:41     63s] % End Load MMMC data ... (date=11/20 12:43:41, total cpu=0:00:00.0, real=0:00:00.0, peak res=821.8M, current mem=821.8M)
+[11/20 12:43:52     65s] <CMD> encMessage warning 0
+[11/20 12:43:52     65s] Suppress "**WARN ..." messages.
+[11/20 12:43:52     65s] <CMD> encMessage debug 0
+[11/20 12:43:52     65s] <CMD> encMessage info 0
+[11/20 12:43:53     65s] 
+[11/20 12:43:53     65s] 
+[11/20 12:43:53     65s] ERROR: **ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+[11/20 12:43:53     65s] 
+[11/20 12:43:53     65s] 
+[11/20 12:43:53     65s] **ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+[11/20 12:43:53     65s] 
+[11/20 12:43:53     65s]     while executing
+[11/20 12:43:53     65s] "error $catchMsg"
+[11/20 12:43:53     65s]     (procedure "restoreDesign" line 31)
+[11/20 12:43:53     65s] 
+[11/20 12:43:53     65s] **ERROR: (IMPSYT-6300):	Failed to execute command 'source'. For more details, refer to error message: **ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+[11/20 12:43:53     65s] 
+[11/20 12:45:02     72s] <CMD> set_power_analysis_mode -reset
+[11/20 12:45:02     72s] <CMD> set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+[11/20 12:46:10     80s] <CMD> set_power_output_dir -reset
+[11/20 12:46:10     80s] <CMD> set_power_output_dir ./tb_fir/UUT
+[11/20 12:46:10     80s] <CMD> set_default_switching_activity -reset
+[11/20 12:46:10     80s] <CMD> set_default_switching_activity -input_activity 0.2 -period 10.0
+[11/20 12:46:10     80s] <CMD> read_activity_file -reset
+[11/20 12:46:10     80s] <CMD> read_activity_file -format VCD -scope /tb -start {} -end {} -block {} ../vcd/design.vcd
+[11/20 12:46:10     80s] 
+[11/20 12:46:10     80s] Power Net Detected:
+[11/20 12:46:10     80s]         Voltage	    Name
+[11/20 12:46:10     80s]              0V	    VSS
+[11/20 12:46:10     80s]            1.1V	    VDD
+[11/20 12:46:11     80s] #################################################################################
+[11/20 12:46:11     80s] # Design Stage: PreRoute
+[11/20 12:46:11     80s] # Design Name: myfir
+[11/20 12:46:11     80s] # Design Mode: 90nm
+[11/20 12:46:11     80s] # Analysis Mode: MMMC Non-OCV 
+[11/20 12:46:11     80s] # Parasitics Mode: No SPEF/RCDB 
+[11/20 12:46:11     80s] # Signoff Settings: SI Off 
+[11/20 12:46:11     80s] #################################################################################
+[11/20 12:46:12     81s] *** CDM Built up (cpu=0:00:01.1  real=0:00:01.0  mem= 1090.9M) ***
+[11/20 12:46:13     82s]              0V	    VSS
+[11/20 12:46:13     82s]            1.1V	    VDD
+[11/20 12:46:15     82s] <CMD> set_power -reset
+[11/20 12:46:15     82s] <CMD> set_powerup_analysis -reset
+[11/20 12:46:15     82s] <CMD> set_dynamic_power_simulation -reset
+[11/20 12:46:15     82s] <CMD> report_power -rail_analysis_format VS -outfile ./tb_fir/UUT/myfir.rpt
+[11/20 12:46:16     83s] AAE DB initialization (MEM=1124.85 CPU=0:00:00.0 REAL=0:00:00.0) 
+[11/20 12:46:16     83s] #################################################################################
+[11/20 12:46:16     83s] # Design Stage: PreRoute
+[11/20 12:46:16     83s] # Design Name: myfir
+[11/20 12:46:16     83s] # Design Mode: 90nm
+[11/20 12:46:16     83s] # Analysis Mode: MMMC Non-OCV 
+[11/20 12:46:16     83s] # Parasitics Mode: No SPEF/RCDB 
+[11/20 12:46:16     83s] # Signoff Settings: SI Off 
+[11/20 12:46:16     83s] #################################################################################
+[11/20 12:46:18     84s] Calculate delays in Single mode...
+[11/20 12:46:18     84s] Topological Sorting (REAL = 0:00:00.0, MEM = 1124.9M, InitMEM = 1124.9M)
+[11/20 12:46:18     84s] Start delay calculation (fullDC) (1 T). (MEM=1124.85)
+[11/20 12:46:18     84s] LayerId::1 widthSet size::1
+[11/20 12:46:18     84s] LayerId::2 widthSet size::1
+[11/20 12:46:18     84s] LayerId::3 widthSet size::1
+[11/20 12:46:18     84s] LayerId::4 widthSet size::1
+[11/20 12:46:18     84s] LayerId::5 widthSet size::1
+[11/20 12:46:18     84s] LayerId::6 widthSet size::1
+[11/20 12:46:18     84s] LayerId::7 widthSet size::1
+[11/20 12:46:18     84s] LayerId::8 widthSet size::1
+[11/20 12:46:18     84s] LayerId::9 widthSet size::1
+[11/20 12:46:18     84s] LayerId::10 widthSet size::1
+[11/20 12:46:18     84s] Updating RC grid for preRoute extraction ...
+[11/20 12:46:18     84s] siFlow : Timing analysis mode is single, using late cdB files
+[11/20 12:46:18     84s] Start AAE Lib Loading. (MEM=1136.37)
+[11/20 12:46:18     84s] End AAE Lib Loading. (MEM=1145.91 CPU=0:00:00.0 Real=0:00:00.0)
+[11/20 12:46:18     84s] End AAE Lib Interpolated Model. (MEM=1145.91 CPU Time=0:00:00.0, Real Time=0:00:00.0)
+[11/20 12:46:18     84s] First Iteration Infinite Tw... 
+[11/20 12:46:29     91s] Total number of fetched objects 11852
+[11/20 12:46:29     91s] End Timing Check Calculation. (CPU Time=0:00:00.1, Real Time=0:00:00.0)
+[11/20 12:46:29     91s] End delay calculation. (MEM=1162.98 CPU=0:00:06.3 REAL=0:00:10.0)
+[11/20 12:46:29     91s] End delay calculation (fullDC). (MEM=1135.9 CPU=0:00:07.2 REAL=0:00:11.0)
+[11/20 12:46:29     91s] *** CDM Built up (cpu=0:00:07.9  real=0:00:13.0  mem= 1135.9M) ***
+[11/20 12:46:30     91s] 
+[11/20 12:46:30     91s] Begin Power Analysis
+[11/20 12:46:30     91s] 
+[11/20 12:46:30     91s]              0V	    VSS
+[11/20 12:46:30     91s]            1.1V	    VDD
+[11/20 12:46:30     91s] Begin Processing Timing Library for Power Calculation
+[11/20 12:46:30     91s] 
+[11/20 12:46:30     91s] Begin Processing Timing Library for Power Calculation
+[11/20 12:46:30     91s] 
+[11/20 12:46:30     91s] 
+[11/20 12:46:30     91s] 
+[11/20 12:46:30     91s] Begin Processing Power Net/Grid for Power Calculation
+[11/20 12:46:30     91s] 
+[11/20 12:46:31     91s] Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=911.96MB/2275.54MB/914.04MB)
+[11/20 12:46:31     91s] 
+[11/20 12:46:31     91s] Begin Processing Timing Window Data for Power Calculation
+[11/20 12:46:31     91s] 
+[11/20 12:46:31     92s] Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=911.98MB/2275.54MB/914.04MB)
+[11/20 12:46:31     92s] 
+[11/20 12:46:31     92s] Begin Processing User Attributes
+[11/20 12:46:31     92s] 
+[11/20 12:46:31     92s] Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=911.98MB/2275.54MB/914.04MB)
+[11/20 12:46:31     92s] 
+[11/20 12:46:31     92s] Begin Processing Signal Activity
+[11/20 12:46:31     92s] 
+[11/20 12:46:32     93s] Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:01, mem(process/total/peak)=912.19MB/2275.54MB/914.04MB)
+[11/20 12:46:32     93s] 
+[11/20 12:46:32     93s] Begin Power Computation
+[11/20 12:46:32     93s] 
+[11/20 12:46:32     93s]       ----------------------------------------------------------
+[11/20 12:46:32     93s]       # of cell(s) missing both power/leakage table: 0
+[11/20 12:46:32     93s]       # of cell(s) missing power table: 0
+[11/20 12:46:32     93s]       # of cell(s) missing leakage table: 0
+[11/20 12:46:32     93s]       # of MSMV cell(s) missing power_level: 0
+[11/20 12:46:32     93s]       ----------------------------------------------------------
+[11/20 12:46:32     93s] 
+[11/20 12:46:32     93s] 
+[11/20 12:46:40     96s] Ended Power Computation: (cpu=0:00:03, real=0:00:07, mem(process/total/peak)=912.69MB/2275.54MB/914.04MB)
+[11/20 12:46:40     96s] 
+[11/20 12:46:40     96s] Begin Processing User Attributes
+[11/20 12:46:40     96s] 
+[11/20 12:46:40     96s] Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=912.69MB/2275.54MB/914.04MB)
+[11/20 12:46:40     96s] 
+[11/20 12:46:40     96s] Ended Power Analysis: (cpu=0:00:04, real=0:00:09, mem(process/total/peak)=912.76MB/2275.54MB/914.04MB)
+[11/20 12:46:40     96s] 
+[11/20 12:46:40     96s] *
+[11/20 12:46:40     96s] 
+[11/20 12:46:40     96s] 
+[11/20 12:46:40     96s] 
+[11/20 12:46:40     96s] Total Power
+[11/20 12:46:40     96s] -----------------------------------------------------------------------------------------
+[11/20 12:46:40     96s] Total Internal Power:        1.17152031 	   48.9165%%
+[11/20 12:46:40     96s] Total Switching Power:       0.84479730 	   35.2743%%
+[11/20 12:46:40     96s] Total Leakage Power:         0.37862251 	   15.8093%%
+[11/20 12:46:40     96s] Total Power:                 2.39494011
+[11/20 12:46:40     96s] -----------------------------------------------------------------------------------------
+[11/20 12:47:48    105s] <CMD> report_power -outfile POWERd2 -sort { total }
+[11/20 12:47:48    106s] *
+[11/20 12:47:48    106s] 
+[11/20 12:47:48    106s] 
+[11/20 12:47:48    106s] 
+[11/20 12:47:48    106s] Total Power
+[11/20 12:47:48    106s] -----------------------------------------------------------------------------------------
+[11/20 12:47:48    106s] Total Internal Power:        1.17152031 	   48.9165%%
+[11/20 12:47:48    106s] Total Switching Power:       0.84479730 	   35.2743%%
+[11/20 12:47:48    106s] Total Leakage Power:         0.37862251 	   15.8093%%
+[11/20 12:47:48    106s] Total Power:                 2.39494011
+[11/20 12:47:48    106s] -----------------------------------------------------------------------------------------
+[11/20 12:52:00    129s] <CMD> win off

@@ -1,0 +1,295 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.11-s130_1, built Wed Aug 5 15:53:11 PDT 2020
+Options:	
+Date:		Mon Nov  6 08:16:56 2023
+Host:		isaserver (x86_64 w/Linux 3.10.0-1160.81.1.el7.x86_64) (6cores*6cpus*QEMU Virtual CPU version 2.5+ 16384KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	20.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (64 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+my_rc
+Loading view definition file from /home/isa22_2023_2024/Desktop/yanghaifeng/lab1_01_finished/innovus/myfirbasicsave.dat/viewDefinition.tcl
+*** End library_loading (cpu=0.04min, real=0.05min, mem=11.0M, fe_cpu=1.55min, fe_real=3.25min, fe_mem=785.4M) ***
+*** Netlist is unique.
+Loading preference file /home/isa22_2023_2024/Desktop/yanghaifeng/lab1_01_finished/innovus/myfirbasicsave.dat/gui.pref.tcl ...
+Loading place ...
+'set_default_switching_activity' finished successfully.
+my_delay
+**WARN: (IMPESI-3505):	setDelayCalMode -eng_copyNetPropToNewNet true (default=false) will be obsoleted along with its sgs2set equivalent.  This parameter will continue to be supported in the current release, but will be removed in the next major release of the software.
+**WARN: (IMPCTE-107):	The following globals have been obsoleted since version 20.11-s130_1. They will be removed in the next release. 
+timing_enable_default_delay_arc
+my_rc
+<CMD> reset_parasitics
+Performing RC Extraction ...
+<CMD> extractRC
+Extraction called for design 'myfir' of instances=7821 and nets=3855 using extraction engine 'preRoute' .
+PreRoute RC Extraction called for design myfir.
+RC Extraction called in multi-corner(1) mode.
+RCMode: PreRoute
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Clock Cap. Scaling Factor    : 1.00000 
+Clock Res. Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+PreRoute extraction is honoring NDR/Shielding/ExtraSpace for clock nets.
+Using capacitance table file ...
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+PreRoute RC Extraction DONE (CPU Time: 0:00:00.4  Real Time: 0:00:00.0  MEM: 1143.398M)
+<CMD> set_power_analysis_mode -reset
+<CMD> set_power_analysis_mode -method static -corner max -create_binary_db true -write_static_currents true -honor_negative_energy true -ignore_control_signals true
+<CMD> set_power_output_dir -reset
+<CMD> set_power_output_dir ./
+<CMD> set_default_switching_activity -reset
+<CMD> set_default_switching_activity -input_activity 0.2 -period 10.0
+** INFO:  (VOLTUS_POWR-3229): Using user defined default frequency 100MHz for power calculation.
+
+'set_default_switching_activity' finished successfully.
+<CMD> read_activity_file -reset
+<CMD> read_activity_file -format VCD -scope /tb_fir/UUT -start {} -end {} -block {} ../vcd/design.vcd
+
+Power Net Detected:
+        Voltage	    Name
+             0V	    VSS
+           1.1V	    VDD
+#################################################################################
+# Design Stage: PreRoute
+# Design Name: myfir
+# Design Mode: 45nm
+# Analysis Mode: MMMC OCV 
+# Parasitics Mode: No SPEF/RCDB 
+# Signoff Settings: SI Off 
+#################################################################################
+             0V	    VSS
+           1.1V	    VDD
+
+Warning:
+  There are 2 power/gnd nets that are not connected
+VSS VDD ...
+Use 'globalNetConnect' to define rail connections.
+[PowermeterNetlistLib::InfoMergingRails]
+** WARN:  (VOLTUS_POWR-2035): There are 2 power/gnd nets that are not connected
+VSS VDD ...
+Use 'globalNetConnect' to define rail connections.
+
+
+clk(250MHz) Parsing VCD file ../vcd/design.vcd
+
+Starting Reading VCD variables
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT)
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 10%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 20%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 30%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 40%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 50%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 60%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 70%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 80%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 90%
+
+Finished Reading VCD variables
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT)
+'read_activity_file' finished successfully.
+<CMD> set_power -reset
+<CMD> set_powerup_analysis -reset
+<CMD> set_dynamic_power_simulation -reset
+<CMD> report_power -rail_analysis_format VS -outfile .//myfir.rpt
+Using Power View: MyAnView.
+
+Begin Power Analysis
+
+             0V	    VSS
+           1.1V	    VDD
+
+Warning:
+  There are 2 power/gnd nets that are not connected
+VSS VDD ...
+Use 'globalNetConnect' to define rail connections.
+[PowermeterNetlistLib::InfoMergingRails]
+** WARN:  (VOLTUS_POWR-2035): There are 2 power/gnd nets that are not connected
+VSS VDD ...
+Use 'globalNetConnect' to define rail connections.
+
+
+
+Begin Processing Timing Library for Power Calculation
+
+Begin Processing Timing Library for Power Calculation
+
+
+
+Begin Processing Power Net/Grid for Power Calculation
+
+Ended Processing Power Net/Grid for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=944.82MB/2308.97MB/944.83MB)
+
+Begin Processing Timing Window Data for Power Calculation
+
+Ended Processing Timing Window Data for Power Calculation: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=944.84MB/2308.97MB/944.85MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=944.94MB/2308.97MB/944.94MB)
+
+Begin Processing Signal Activity
+
+
+Starting Levelizing
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT)
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 10%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 20%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 30%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 40%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 50%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 60%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 70%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 80%
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT): 90%
+
+Finished Levelizing
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT)
+
+Starting Activity Propagation
+2023-Nov-06 08:25:27 (2023-Nov-06 07:25:27 GMT)
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 10%
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 20%
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 30%
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 40%
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 50%
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 60%
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 70%
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 80%
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 90%
+
+Finished Activity Propagation
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT)
+
+Activity annotation summary:
+        Primary Inputs : 1/123 = 0.813008%
+          Flop outputs : 0/229 = 0%
+  Memory/Macro outputs : 0/0 = 0%
+      Tristate outputs : 0/0 = 0%
+            Total Nets : 1/3853 = 0.0259538%
+
+Ended Processing Signal Activity: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=945.20MB/2308.97MB/945.20MB)
+
+Begin Power Computation
+
+      ----------------------------------------------------------
+      # of cell(s) missing both power/leakage table: 0
+      # of cell(s) missing power table: 0
+      # of cell(s) missing leakage table: 0
+      # of MSMV cell(s) missing power_level: 0
+      ----------------------------------------------------------
+
+
+
+Starting Calculating power
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT)
+ ... Calculating switching power
+  Cannot locate supply power rail for net 'DOUT[11]' of instance
+DOUT_reg_11_
+  Cannot locate supply power rail for net 'DOUT[10]' of instance
+DOUT_reg_10_
+  Cannot locate supply power rail for net 'DOUT[9]' of instance DOUT_reg_9_
+  Cannot locate supply power rail for net 'DOUT[8]' of instance DOUT_reg_8_
+  Cannot locate supply power rail for net 'DOUT[7]' of instance DOUT_reg_7_
+  only first five unconnected nets are listed...
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 10%
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 20%
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 30%
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 40%
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 50%
+ ... Calculating internal and leakage power
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 60%
+2023-Nov-06 08:25:28 (2023-Nov-06 07:25:28 GMT): 70%
+2023-Nov-06 08:25:29 (2023-Nov-06 07:25:29 GMT): 80%
+2023-Nov-06 08:25:29 (2023-Nov-06 07:25:29 GMT): 90%
+
+Finished Calculating power
+2023-Nov-06 08:25:29 (2023-Nov-06 07:25:29 GMT)
+Ended Power Computation: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=945.78MB/2308.97MB/945.78MB)
+
+Begin Processing User Attributes
+
+Ended Processing User Attributes: (cpu=0:00:00, real=0:00:00, mem(process/total/peak)=945.78MB/2308.97MB/945.85MB)
+
+Ended Power Analysis: (cpu=0:00:01, real=0:00:01, mem(process/total/peak)=945.85MB/2308.97MB/945.85MB)
+
+Begin Boundary Leakage Calculation
+Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=945.86MB/2308.97MB/945.86MB)
+Begin Static Power Report Generation
+*
+
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:        1.94763447 	   53.1276%
+Total Switching Power:       1.59309726 	   43.4566%
+Total Leakage Power:         0.12522190 	    3.4158%
+Total Power:                 3.66595363
+-----------------------------------------------------------------------------------------
+** WARN:  (VOLTUS_POWR-2041): There are some instances in the design which are not connected to any power or ground nets.
+These instances will be added to default power/ground rail uti files.
+Use 'itaputil list <uti-file>' command to get the list of instances.
+
+Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=946.25MB/2308.97MB/946.29MB)
+
+Begin Creating Binary Database
+Ended Creating Binary Database: (cpu=0:00:02, real=0:00:02,
+mem(process/total/peak)=1448.03MB/3079.39MB/1448.27MB)
+
+Output file is .//myfir.rpt.
+<CMD> report_power -outfile pow13p6ns -sort { total }
+Using Power View: MyAnView.
+Begin Boundary Leakage Calculation
+Ended Boundary Leakage Calculation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=863.03MB/2235.66MB/1459.69MB)
+Begin Static Power Report Generation
+*
+
+
+
+Total Power
+-----------------------------------------------------------------------------------------
+Total Internal Power:        1.94763447 	   53.1276%
+Total Switching Power:       1.59309726 	   43.4566%
+Total Leakage Power:         0.12522190 	    3.4158%
+Total Power:                 3.66595363
+-----------------------------------------------------------------------------------------
+Ended Static Power Report Generation: (cpu=0:00:00, real=0:00:00,
+mem(process/total/peak)=863.41MB/2235.66MB/1459.69MB)
+
+
+Output file is .//pow13p6ns.
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Mon Nov  6 08:42:20 2023
+  Total CPU time:     0:09:01
+  Total real time:    0:25:26
+  Peak memory (main): 1459.69MB
+
+
+*** Memory Usage v#2 (Current mem = 1114.207M, initial mem = 280.289M) ***
+*** Message Summary: 2 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:09:00, real=0:25:24, mem=1114.2M) ---

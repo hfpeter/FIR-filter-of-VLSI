@@ -1,0 +1,1437 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2020 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v20.11-s130_1, built Wed Aug 5 15:53:11 PDT 2020
+Options:	
+Date:		Mon Nov 20 13:01:56 2023
+Host:		isaserver (x86_64 w/Linux 3.10.0-1160.81.1.el7.x86_64) (6cores*6cpus*QEMU Virtual CPU version 2.5+ 16384KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	20.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (64 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+**ERROR: (TCLCMD-989):	cannot open SDC file '/home/isa22_2023_2024/Desktop/yanghaifeng/lab1_pipelineOK/innovus/myfir.SAVE.dat/libs/mmmc/myfir.sdc' for mode 'SDC_layout'
+
+
+ERROR: 
+
+
+    while executing
+"error $catchMsg"
+    (procedure "restoreDesign" line 31)
+
+<CMD> set init_design_netlisttype verilog
+<CMD> set init_design_settop 1
+<CMD> set init_top_cell myfir
+<CMD> set init_verilog ../netlist/myfir.v
+<CMD> set init_lef_file /eda/dk/nangate45/lef/NangateOpenCellLibrary.lef
+<CMD> set init_gnd_net VSS
+<CMD> set init_pwr_net VDD
+<CMD> set init_mmmc_file mmm_design.tcl
+<CMD> init_design
+% Begin Load MMMC data ... (date=11/20 13:17:08, mem=567.9M)
+% End Load MMMC data ... (date=11/20 13:17:08, total cpu=0:00:00.0, real=0:00:00.0, peak res=568.0M, current mem=568.0M)
+my_rc
+
+Loading LEF file /eda/dk/nangate45/lef/NangateOpenCellLibrary.lef ...
+Set DBUPerIGU to M2 pitch 380.
+
+viaInitial starts at Mon Nov 20 13:17:09 2023
+viaInitial ends at Mon Nov 20 13:17:09 2023
+
+##  Check design process and node:  
+##  Both design process and tech node are not set.
+
+Loading view definition file from mmm_design.tcl
+Reading MY_LIBSET timing library '/eda/dk/nangate45/liberty/NangateOpenCellLibrary_typical_ecsm.lib' ...
+Read 134 cells in library 'NangateOpenCellLibrary' 
+*** End library_loading (cpu=0.04min, real=0.08min, mem=10.0M, fe_cpu=1.84min, fe_real=15.30min, fe_mem=781.9M) ***
+% Begin Load netlist data ... (date=11/20 13:17:14, mem=581.6M)
+*** Begin netlist parsing (mem=781.9M) ***
+Created 134 new cells from 1 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../netlist/myfir.v'
+
+*** Memory Usage v#2 (Current mem = 781.941M, initial mem = 272.285M) ***
+*** End netlist parsing (cpu=0:00:00.2, real=0:00:00.0, mem=781.9M) ***
+% End Load netlist data ... (date=11/20 13:17:14, total cpu=0:00:00.2, real=0:00:00.0, peak res=589.6M, current mem=589.6M)
+Set top cell to myfir.
+Hooked 134 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell myfir ...
+*** Netlist is unique.
+** info: there are 138 modules.
+** info: there are 9787 stdCell insts.
+
+*** Memory Usage v#2 (Current mem = 827.867M, initial mem = 272.285M) ***
+*info: set bottom ioPad orient R0
+Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+*Info: initialize multi-corner CTS.
+Total number of combinational cells: 99
+Total number of sequential cells: 29
+Total number of tristate cells: 6
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUF_X1 BUF_X2 BUF_X4 BUF_X8 BUF_X16 BUF_X32 CLKBUF_X1 CLKBUF_X2 CLKBUF_X3
+Total number of usable buffers: 9
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INV_X1 INV_X2 INV_X4 INV_X8 INV_X16 INV_X32
+Total number of usable inverters: 6
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells:
+Total number of identified usable delay cells: 0
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+% Begin Load MMMC data ... (date=11/20 13:17:18, mem=819.5M)
+% End Load MMMC data ... (date=11/20 13:17:18, total cpu=0:00:00.0, real=0:00:00.0, peak res=819.5M, current mem=819.5M)
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+
+
+ERROR: **ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+
+
+**ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+
+    while executing
+"error $catchMsg"
+    (procedure "restoreDesign" line 31)
+
+**ERROR: (IMPSYT-6300):	Failed to execute command 'source'. For more details, refer to error message: **ERROR: (IMPIMEX-7031):	restoreDesign more than once in the same Innovus session is dangerous and not recommended. Some internal state of applications or global settings cannot be reset, so it's not reliable enough in real flow. If you are just experimenting and/or debugging and accept the risks, you can set the global restore_db_stop_at_design_in_memory to 0 and try again.
+
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -coreMarginsBy die -site FreePDK45_38x28_10R_NP_162NW_34O -r 1 0.6 5.13 5.04 5.13 5.04
+Generated pitch 1.68 in metal10 is different from 1.6 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal8 is different from 0.8 defined in technology file in preferred direction.
+Generated pitch 0.84 in metal7 is different from 0.8 defined in technology file in preferred direction.
+**WARN: (IMPFP-325):	Floorplan of the design is resized. All current floorplan objects are automatically derived based on specified new floorplan. This may change blocks, fixed standard cells, existing routes and blockages.
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer metal10 -stacked_via_bottom_layer metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {VDD VSS} -type core_rings -follow core -layer {top metal1 bottom metal1 left metal2 right metal2} -width {top 0.8 bottom 0.8 left 0.8 right 0.8} -spacing {top 0.8 bottom 0.8 left 0.8 right 0.8} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+Loading cell geometries (cpu: 0:00:00.0, real: 0:00:00.0, peak mem: 1064.9M)
+Ring generation is complete.
+vias are now being generated.
+addRing created 8 wires.
+ViaGen created 8 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |        4       |       NA       |
+|  via1  |        8       |        0       |
+| metal2 |        4       |       NA       |
++--------+----------------+----------------+
+**ERROR: (IMPSYT-16175):	<To Global Net> field must be specified.
+<CMD> clearGlobalNets
+<CMD> globalNetConnect VDD -type pgpin -pin {} -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1219):	Pin name not specified.
+<CMD> globalNetConnect VSS -type pgpin -pin {} -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1219):	Pin name not specified.
+<CMD> setSrouteMode -viaConnectToShape { noshape }
+<CMD> sroute -connect { blockPin padPin padRing corePin floatingStripe } -layerChangeRange { metal1(1) metal10(10) } -blockPinTarget { nearestTarget } -padPinPortConnect { allPort oneGeom } -padPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -floatingStripeTarget { blockring padring ring stripe ringpin blockpin followpin } -allowJogging 1 -crossoverViaLayerRange { metal1(1) metal10(10) } -nets { VDD VSS } -allowLayerChange 1 -blockPin useLef -targetViaLayerRange { metal1(1) metal10(10) }
+*** Begin SPECIAL ROUTE on Mon Nov 20 13:23:35 2023 ***
+SPECIAL ROUTE ran on directory: /home/isa22_2023_2024/Desktop/yanghaifeng/lab1_pipelineOK/innovus
+SPECIAL ROUTE ran on machine: isaserver (Linux 3.10.0-1160.81.1.el7.x86_64 x86_64 1.99Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "VDD VSS"
+routeSpecial set to true
+srouteBlockPin set to "useLef"
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectConverterPin set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 10
+srouteFloatingStripeTarget set to "blockring padring ring stripe ringpin blockpin followpin"
+srouteFollowCorePinEnd set to 3
+srouteJogControl set to "preferWithChanges differentLayer"
+srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 10
+srouteTopTargetLayerLimit set to 10
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 2188.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+Read in 20 layers, 10 routing layers, 1 overlap layer
+Read in 134 macros, 39 used
+Read in 39 components
+  39 core components: 39 unplaced, 0 placed, 0 fixed
+Read in 184 logical pins
+Read in 184 nets
+Read in 2 special nets, 2 routed
+2 nets selected.
+
+Begin power routing ...
+**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VDD net.
+ Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
+**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VDD net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
+**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VDD net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+Type 'man IMPSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net VDD. Check net list, or change port class in the technology file, or change option to include pin in given range.
+**WARN: (IMPSR-1253):	Unable to find any standard cell pin connected to the VSS net.
+ Run the globalNetConnect command or change the CPF file to ensure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as 'USE POWER' or 'USE GROUND' for the connection.
+**WARN: (IMPSR-1254):	Unable to connect the specified objects, since block pins of the VSS net were not found in the design. Check netlist or change the parameter value to include block pins in the design.
+**WARN: (IMPSR-1256):	Unable to find any CORE class pad pin of the VSS net due to unavailability of the pin or check netlist in the routing area or layer. Change routing area or layer to include the expected pin or check netlist. Alternatively, change port class in the technology file.
+Type 'man IMPSR-1256' for more detail.
+Cannot find any AREAIO class pad pin of net VSS. Check net list, or change port class in the technology file, or change option to include pin in given range.
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDD.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDD.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSS.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSS.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDD.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VDD.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+CPU time for FollowPin 0 seconds
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSS.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+**WARN: (IMPSR-468):	Cannot find any standard cell pin connected to net VSS.
+Use setSrouteMode -corePinReferenceMacro <standard cell> to specify a reference macro for followpin connection, or run globalNetConnect command or change CPF file to make sure that the netlist reflects the correct power ground connections. The standard cell pins must be defined as "USE POWER" or "USE GROUND".
+CPU time for FollowPin 0 seconds
+  Number of IO ports routed: 0
+  Number of Block ports routed: 0
+  Number of Stripe ports routed: 0
+  Number of Core ports routed: 250
+  Number of Pad ports routed: 0
+  Number of Power Bump ports routed: 0
+  Number of Followpin connections: 125
+End power routing: cpu: 0:00:00, real: 0:00:00, peak: 2215.00 megs.
+
+
+
+ Begin updating DB with routing results ...
+ Updating DB with 0 via definition ...Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+
+sroute created 375 wires.
+ViaGen created 250 vias, deleted 0 via to avoid violation.
++--------+----------------+----------------+
+|  Layer |     Created    |     Deleted    |
++--------+----------------+----------------+
+| metal1 |       375      |       NA       |
+|  via1  |       250      |        0       |
++--------+----------------+----------------+
+<CMD> setPlaceMode -prerouteAsObs {1 2 3 4 5 6 7 8}
+<CMD> setRouteMode -earlyGlobalHonorMsvRouteConstraint false -earlyGlobalRoutePartitionPinGuide true
+<CMD> setEndCapMode -reset
+<CMD> setEndCapMode -boundary_tap false
+<CMD> setNanoRouteMode -quiet -droutePostRouteSpreadWire 1
+<CMD> setNanoRouteMode -quiet -timingEngine {}
+<CMD> setUsefulSkewMode -maxSkew false -noBoundary false -useCells {CLKBUF_X3 CLKBUF_X2 CLKBUF_X1 BUF_X32 BUF_X16 BUF_X8 BUF_X4 BUF_X2 BUF_X1 INV_X32 INV_X16 INV_X8 INV_X4 INV_X2 INV_X1} -maxAllowedDelay 1
+<CMD> setPlaceMode -reset
+<CMD> setPlaceMode -congEffort auto -timingDriven 1 -clkGateAware 1 -powerDriven 0 -ignoreScan 1 -reorderScan 1 -ignoreSpare 0 -placeIOPins 1 -moduleAwareSpare 0 -preserveRouting 1 -rmAffectedRouting 0 -checkRoute 0 -swapEEQ 0
+<CMD> setPlaceMode -fp false
+<CMD> place_design
+Extracting standard cell pins and blockage ...... 
+Pin and blockage extraction finished
+*** Starting placeDesign default flow ***
+Updating RC grid for preRoute extraction ...
+*** Start deleteBufferTree ***
+Info: Detect buffers to remove automatically.
+Analyzing netlist ...
+Updating netlist
+AAE DB initialization (MEM=1114.66 CPU=0:00:00.0 REAL=0:00:00.0) 
+siFlow : Timing analysis mode is single, using late cdB files
+
+*summary: 537 instances (buffers/inverters) removed
+*** Finish deleteBufferTree (0:00:02.4) ***
+**INFO: Enable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+Set Default Net Delay as 0 ps.
+Set Default Net Load as 0 pF. 
+**INFO: Analyzing IO path groups for slack adjustment
+**INFO: Disable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+**INFO: Pre-place timing setting for timing analysis already disabled
+Deleted 0 physical inst  (cell - / prefix -).
+INFO: #ExclusiveGroups=0
+INFO: There are no Exclusive Groups.
+*** Starting "NanoPlace(TM) placement v#15 (mem=1124.2M)" ...
+*** Build Buffered Sizing Timing Model
+(cpu=0:00:00.7 mem=1132.2M) ***
+*** Build Virtual Sizing Timing Model
+(cpu=0:00:00.9 mem=1132.2M) ***
+No user-set net weight.
+Net fanout histogram:
+2		: 6699 (60.9%) nets
+3		: 3152 (28.6%) nets
+4     -	14	: 880 (8.0%) nets
+15    -	39	: 265 (2.4%) nets
+40    -	79	: 8 (0.1%) nets
+80    -	159	: 0 (0.0%) nets
+160   -	319	: 1 (0.0%) nets
+320   -	639	: 1 (0.0%) nets
+640   -	1279	: 0 (0.0%) nets
+1280  -	2559	: 0 (0.0%) nets
+2560  -	5119	: 0 (0.0%) nets
+5120+		: 0 (0.0%) nets
+Options: timingDriven clkGateAware ignoreScan pinGuide congEffort=auto gpeffort=medium 
+**WARN: (IMPSP-9042):	Scan chains were not defined, -place_global_ignore_scan option will be ignored.
+Define the scan chains before using this option.
+Type 'man IMPSP-9042' for more detail.
+#std cell=9325 (0 fixed + 9325 movable) #buf cell=0 #inv cell=963 #block=0 (0 floating + 0 preplaced)
+#ioInst=0 #net=11006 #term=35855 #term/net=3.26, #fixedIo=0, #floatIo=0, #fixedPin=0, #floatPin=169
+stdCell: 9325 single + 0 double + 0 multi
+Total standard cell length = 12.7536 (mm), area = 0.0179 (mm^2)
+Estimated cell power/ground rail width = 0.197 um
+Average module density = 0.589.
+Density for the design = 0.589.
+       = stdcell_area 67124 sites (17855 um^2) / alloc_area 113956 sites (30312 um^2).
+Pin Density = 0.3146.
+            = total # of pins 35855 / total area 113956.
+=== lastAutoLevel = 8 
+Clock gating cells determined by native netlist tracing.
+Iteration  1: Total net bbox = 1.431e-09 (7.54e-10 6.77e-10)
+              Est.  stn bbox = 1.528e-09 (7.99e-10 7.29e-10)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1166.7M
+Iteration  2: Total net bbox = 1.431e-09 (7.54e-10 6.77e-10)
+              Est.  stn bbox = 1.528e-09 (7.99e-10 7.29e-10)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1167.7M
+Iteration  3: Total net bbox = 3.023e+02 (1.37e+02 1.65e+02)
+              Est.  stn bbox = 3.777e+02 (1.70e+02 2.07e+02)
+              cpu = 0:00:00.7 real = 0:00:01.0 mem = 1185.8M
+Active setup views:
+    MyAnView
+Iteration  4: Total net bbox = 5.441e+04 (2.33e+04 3.11e+04)
+              Est.  stn bbox = 7.123e+04 (3.01e+04 4.12e+04)
+              cpu = 0:00:05.9 real = 0:00:12.0 mem = 1185.8M
+Iteration  5: Total net bbox = 5.939e+04 (2.77e+04 3.17e+04)
+              Est.  stn bbox = 8.054e+04 (3.74e+04 4.32e+04)
+              cpu = 0:00:05.0 real = 0:00:11.0 mem = 1185.8M
+Iteration  6: Total net bbox = 7.173e+04 (3.42e+04 3.76e+04)
+              Est.  stn bbox = 9.639e+04 (4.58e+04 5.06e+04)
+              cpu = 0:00:07.1 real = 0:00:13.0 mem = 1187.4M
+Iteration  7: Total net bbox = 8.105e+04 (4.05e+04 4.06e+04)
+              Est.  stn bbox = 1.063e+05 (5.24e+04 5.39e+04)
+              cpu = 0:00:00.4 real = 0:00:01.0 mem = 1187.4M
+Iteration  8: Total net bbox = 8.105e+04 (4.05e+04 4.06e+04)
+              Est.  stn bbox = 1.063e+05 (5.24e+04 5.39e+04)
+              cpu = 0:00:08.8 real = 0:00:17.0 mem = 1199.0M
+Iteration  9: Total net bbox = 8.859e+04 (4.45e+04 4.41e+04)
+              Est.  stn bbox = 1.147e+05 (5.69e+04 5.78e+04)
+              cpu = 0:00:06.3 real = 0:00:15.0 mem = 1200.0M
+Iteration 10: Total net bbox = 8.859e+04 (4.45e+04 4.41e+04)
+              Est.  stn bbox = 1.147e+05 (5.69e+04 5.78e+04)
+              cpu = 0:00:08.8 real = 0:00:21.0 mem = 1200.0M
+Iteration 11: Total net bbox = 9.594e+04 (4.81e+04 4.79e+04)
+              Est.  stn bbox = 1.217e+05 (6.03e+04 6.14e+04)
+              cpu = 0:00:11.5 real = 0:00:21.0 mem = 1202.0M
+Iteration 12: Total net bbox = 9.594e+04 (4.81e+04 4.79e+04)
+              Est.  stn bbox = 1.217e+05 (6.03e+04 6.14e+04)
+              cpu = 0:00:00.0 real = 0:00:00.0 mem = 1202.0M
+*** cost = 9.594e+04 (4.81e+04 4.79e+04) (cpu for global=0:00:55.7) real=0:01:55***
+Info: 0 clock gating cells identified, 0 (on average) moved 0/5
+Solver runtime cpu: 0:00:35.1 real: 0:01:10
+Core Placement runtime cpu: 0:00:36.7 real: 0:01:14
+**WARN: (IMPSP-9025):	No scan chain specified/traced.
+Type 'man IMPSP-9025' for more detail.
+*** Starting refinePlace (0:03:37 mem=1218.0M) ***
+Total net bbox length = 9.599e+04 (4.809e+04 4.790e+04) (ext = 3.958e+03)
+Move report: Detail placement moves 9325 insts, mean move: 0.68 um, max move: 20.56 um
+	Max move on inst (FE_DBTC51_coef_arr_0): (32.97, 39.26) --> (29.83, 21.84)
+	Runtime: CPU: 0:00:02.8 REAL: 0:00:06.0 MEM: 1218.0MB
+Summary Report:
+Instances move: 9325 (out of 9325 movable)
+Instances flipped: 0
+Mean displacement: 0.68 um
+Max displacement: 20.56 um (Instance: FE_DBTC51_coef_arr_0) (32.971, 39.256) -> (29.83, 21.84)
+	Length: 2 sites, height: 1 rows, site name: FreePDK45_38x28_10R_NP_162NW_34O, cell type: INV_X1
+Total net bbox length = 9.139e+04 (4.321e+04 4.819e+04) (ext = 3.884e+03)
+Runtime: CPU: 0:00:02.8 REAL: 0:00:06.0 MEM: 1218.0MB
+*** Finished refinePlace (0:03:40 mem=1218.0M) ***
+*** End of Placement (cpu=0:01:01, real=0:02:08, mem=1218.0M) ***
+default core: bins with density > 0.750 =  7.10 % ( 12 / 169 )
+Density distribution unevenness ratio = 6.458%
+*** Free Virtual Timing Model ...(mem=1218.0M)
+Starting IO pin assignment...
+The design is not routed. Using placement based method for pin assignment.
+Completed IO pin assignment.
+**INFO: Enable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 101.
+**WARN: (IMPDC-1629):	The default delay limit was set to 101. This is less than the default of 1000 and may result in inaccurate delay calculation for nets with a fanout higher than the setting.  If needed, the default delay limit may be adjusted by running the command 'set delaycal_use_default_delay_limit'.
+Set Default Net Delay as 0 ps.
+Set Default Net Load as 0 pF. 
+**INFO: Analyzing IO path groups for slack adjustment
+**INFO: Disable pre-place timing setting for timing analysis
+Set Using Default Delay Limit as 1000.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Info: Disable timing driven in postCTS congRepair.
+
+Starting congRepair ...
+[NR-eGR] Track table information for default rule: 
+[NR-eGR] metal1 has no routable track
+[NR-eGR] metal2 has single uniform track structure
+[NR-eGR] metal3 has single uniform track structure
+[NR-eGR] metal4 has single uniform track structure
+[NR-eGR] metal5 has single uniform track structure
+[NR-eGR] metal6 has single uniform track structure
+[NR-eGR] metal7 has single uniform track structure
+[NR-eGR] metal8 has single uniform track structure
+[NR-eGR] metal9 has single uniform track structure
+[NR-eGR] metal10 has single uniform track structure
+[NR-eGR] Read 262 PG shapes
+[NR-eGR] #Routing Blockages  : 0
+[NR-eGR] #Instance Blockages : 0
+[NR-eGR] #PG Blockages       : 262
+[NR-eGR] #Halo Blockages     : 0
+[NR-eGR] #Boundary Blockages : 0
+[NR-eGR] Num Prerouted Nets = 0  Num Prerouted Wires = 0
+[NR-eGR] Read numTotalNets=11006  numIgnoredNets=0
+[NR-eGR] ============ Routing rule table ============
+[NR-eGR] Rule id: 0  Nets: 11006 
+[NR-eGR] ========================================
+[NR-eGR] 
+[NR-eGR] Layer group 1: route 11006 net(s) in layer range [2, 10]
+[NR-eGR] Early Global Route overflow of layer group 1: 0.00% H + 0.00% V. EstWL: 1.073730e+05um
+[NR-eGR] Congestion Analysis By layer: (blocked Gcells are excluded) 
+[NR-eGR]                        OverCon            
+[NR-eGR]                         #Gcell     %Gcell
+[NR-eGR]       Layer                (1)    OverCon 
+[NR-eGR] ----------------------------------------------
+[NR-eGR]  metal1  (1)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  metal2  (2)         4( 0.02%)   ( 0.02%) 
+[NR-eGR]  metal3  (3)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  metal4  (4)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  metal5  (5)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  metal6  (6)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  metal7  (7)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  metal8  (8)         0( 0.00%)   ( 0.00%) 
+[NR-eGR]  metal9  (9)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] metal10 (10)         0( 0.00%)   ( 0.00%) 
+[NR-eGR] ----------------------------------------------
+[NR-eGR] Total                4( 0.00%)   ( 0.00%) 
+[NR-eGR] 
+[NR-eGR] Overflow after Early Global Route (GR compatible) 0.00% H + 0.00% V
+[NR-eGR] Overflow after Early Global Route 0.00% H + 0.00% V
+Early Global Route congestion estimation runtime: 0.96 seconds, mem = 1208.4M
+Local HotSpot Analysis: normalized max congestion hotspot area = 0.00, normalized total congestion hotspot area = 0.00 (area is in unit of 4 std-cell row bins)
+Skipped repairing congestion.
+[NR-eGR] Started Export DB wires ( Curr Mem: 1208.44 MB )
+[NR-eGR] Started Export all nets ( Curr Mem: 1208.44 MB )
+[NR-eGR] Finished Export all nets ( CPU: 0.10 sec, Real: 0.26 sec, Curr Mem: 1208.44 MB )
+[NR-eGR] Started Set wire vias ( Curr Mem: 1208.44 MB )
+[NR-eGR] Finished Set wire vias ( CPU: 0.02 sec, Real: 0.03 sec, Curr Mem: 1208.44 MB )
+[NR-eGR] Finished Export DB wires ( CPU: 0.13 sec, Real: 0.32 sec, Curr Mem: 1208.44 MB )
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] metal1  (1F) length: 0.000000e+00um, number of vias: 35686
+[NR-eGR] metal2  (2V) length: 3.025157e+04um, number of vias: 43979
+[NR-eGR] metal3  (3H) length: 4.984803e+04um, number of vias: 14632
+[NR-eGR] metal4  (4V) length: 2.365563e+04um, number of vias: 922
+[NR-eGR] metal5  (5H) length: 2.972390e+03um, number of vias: 827
+[NR-eGR] metal6  (6V) length: 7.204855e+03um, number of vias: 17
+[NR-eGR] metal7  (7H) length: 9.990000e+00um, number of vias: 10
+[NR-eGR] metal8  (8V) length: 2.452800e+02um, number of vias: 0
+[NR-eGR] metal9  (9H) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] metal10 (10V) length: 0.000000e+00um, number of vias: 0
+[NR-eGR] Total length: 1.141877e+05um, number of vias: 96073
+[NR-eGR] --------------------------------------------------------------------------
+[NR-eGR] Total eGR-routed clock nets wire length: 0.000000e+00um 
+[NR-eGR] --------------------------------------------------------------------------
+Early Global Route wiring runtime: 1.00 seconds, mem = 1208.4M
+Tdgp not successfully inited but do clear! skip clearing
+End of congRepair (cpu=0:00:00.8, real=0:00:02.0)
+*** Finishing placeDesign default flow ***
+**placeDesign ... cpu = 0: 1: 5, real = 0: 2:19, mem = 1188.4M **
+Tdgp not successfully inited but do clear! skip clearing
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPDC-1629           2  The default delay limit was set to %d. T...
+WARNING   IMPSP-9025           1  No scan chain specified/traced.          
+WARNING   IMPSP-9042           1  Scan chains were not defined, -place_glo...
+*** Message Summary: 4 warning(s), 0 error(s)
+
+<CMD> setDesignMode -process 45
+##  Process: 45            (User Set)               
+##     Node: (not set)                           
+
+##  Check design process and node:  
+##  Design tech node is not set.
+
+Applying the recommended capacitance filtering threshold values for 45nm process node: total_c_th=0, relative_c_th=1 and coupling_c_th=0.1.
+	These values will be used by all post-route extraction engines, including TQuantus, IQuantus and Quantus QRC extraction.
+	Capacitance filtering mode(-capFilterMode option of the setExtractRCMode) is 'relAndCoup' for all engines.
+	The accuracy mode for postRoute effortLevel low extraction will be set to 'high'.
+	Default value for EffortLevel(-effortLevel option of the setExtractRCMode) in postRoute extraction mode will be 'medium' if Quantus QRC technology file is specified else 'low'.
+<CMD> selectWire 110.0700 73.8000 110.1400 86.8500 2 N480
+<CMD> setOptMode -fixCap true -fixTran true -fixFanoutLoad false
+<CMD> optDesign -preCTS
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 920.0M, totSessionCpu=0:03:47 **
+Executing: place_opt_design -opt
+No user sequential activity specified, applying default sequential activity of "0.2" for Dynamic Power reporting.
+'set_default_switching_activity' finished successfully.
+*** Starting GigaPlace ***
+**INFO: User settings:
+setDesignMode -process                              45
+setExtractRCMode -coupling_c_th                     0.1
+setExtractRCMode -engine                            preRoute
+setExtractRCMode -relative_c_th                     1
+setExtractRCMode -total_c_th                        0
+setUsefulSkewMode -maxAllowedDelay                  1
+setUsefulSkewMode -maxSkew                          false
+setUsefulSkewMode -noBoundary                       false
+setUsefulSkewMode -useCells                         {BUF_X1 BUF_X2 BUF_X4 BUF_X8 BUF_X16 BUF_X32 CLKBUF_X1 CLKBUF_X2 CLKBUF_X3 INV_X1 INV_X2 INV_X4 INV_X8 INV_X16 INV_X32}
+setDelayCalMode -engine                             aae
+setDelayCalMode -ignoreNetLoad                      false
+setOptMode -fixCap                                  true
+setOptMode -fixFanoutLoad                           false
+setOptMode -fixTran                                 true
+setPlaceMode -place_design_floorplan_mode           false
+setPlaceMode -place_detail_check_route              false
+setPlaceMode -place_detail_preserve_routing         true
+setPlaceMode -place_detail_remove_affected_routing  false
+setPlaceMode -place_detail_swap_eeq_cells           false
+setPlaceMode -place_global_clock_gate_aware         true
+setPlaceMode -place_global_cong_effort              auto
+setPlaceMode -place_global_ignore_scan              true
+setPlaceMode -place_global_ignore_spare             false
+setPlaceMode -place_global_module_aware_spare       false
+setPlaceMode -place_global_place_io_pins            true
+setPlaceMode -place_global_reorder_scan             true
+setPlaceMode -powerDriven                           false
+setPlaceMode -timingDriven                          true
+setAnalysisMode -analysisType                       single
+setAnalysisMode -clkSrcPath                         true
+setAnalysisMode -clockPropagation                   sdcControl
+setAnalysisMode -virtualIPO                         false
+setRouteMode -earlyGlobalHonorMsvRouteConstraint    false
+setRouteMode -earlyGlobalRoutePartitionPinGuide     true
+
+**optDesign ... cpu = 0:00:00, real = 0:00:00, mem = 920.5M, totSessionCpu=0:03:47 **
+**INFO: setDesignMode -flowEffort standard -> setting 'setOptMode -allEndPoints true' for the duration of this command.
+GigaOpt running with 1 threads.
+Updating RC grid for preRoute extraction ...
+Innovus terminated by internal (SEGV) error/signal...
+*** Stack trace:
+*** Stack trace:
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus[0x13819885]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(syStackTrace+0xb6)[0x13819d07]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus[0x4c66a83]
+/lib64/libpthread.so.0(+0xf62f)[0x7f5aeee5962f]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN22pesPreRouteRCInterface22getNDRExtCapPerUnitLenEiibPcRKSt6vectorIdSaIdEEibPK11eeExtraInfo+0x1f9)[0xd12aa09]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN22pesPreRouteRCInterface28getNDRExtCapPerUnitLenForLIEEiibPcRKSt6vectorIdSaIdEEibbPK11eeExtraInfo+0x10f)[0xd12c12f]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus[0x7817e17]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN27oiRTLengthPredictionManager18getBestAreaPsPerMMER15oiNdrLayerRulesRdS2_S2_S2_+0x116)[0x7821db6]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN27oiRTLengthPredictionManager19initAreaPsPerMmDataEv+0x85)[0x7821ef5]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN13oiLibAnalyzer4initEv+0x123a)[0x783955a]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN13oiLibAnalyzerC1Ev+0x67e)[0x783a42e]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN13oiLibAnalyzer3getEv+0x5f)[0x783a69f]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN14rdaOptDesignCL6reInitEb+0x178)[0x4eeefd8]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN14rdaOptDesignCLC1EP10Tcl_InterpiPPcP6tcmCmd+0x7cf)[0x4efd2af]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus[0x4f15cda]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN10tcmBaseCmd7executeEP10Tcl_InterpiPPc+0x166)[0x15b84a66]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN6tcmMgr9cmdParserEPvP10Tcl_InterpiPPc+0xad2)[0x15b78612]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(TclInvokeStringCommand+0x7f)[0x218b56df]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(TclNRRunCallbacks+0x46)[0x218ba056]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus[0x218bc527]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(Tcl_EvalEx+0x15)[0x218bce55]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(Tcl_Eval+0x14)[0x218bce74]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus[0x4f15745]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN10tcmBaseCmd7executeEP10Tcl_InterpiPPc+0x166)[0x15b84a66]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN6tcmMgr9cmdParserEPvP10Tcl_InterpiPPc+0xad2)[0x15b78612]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(TclInvokeStringCommand+0x7f)[0x218b56df]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(TclNRRunCallbacks+0x46)[0x218ba056]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus[0x218bc527]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus[0x21985121]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus[0x218bc134]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(Tcl_EvalEx+0x15)[0x218bce55]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(Tcl_Eval+0x14)[0x218bce74]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_Z10qtfTclEvalPcbb+0xa4)[0x11f3ead4]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN8qtfsItem10fUpdateVarEv+0x245)[0x11ee4e55]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN11QMetaObject8activateEP7QObjectiiPPv+0x5de)[0x7f5af2a90ebe]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(_ZN15QAbstractButton7clickedEb+0x31)[0x7f5af2478041]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(+0x349253)[0x7f5af2478253]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(+0x34a541)[0x7f5af2479541]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(_ZN15QAbstractButton17mouseReleaseEventEP11QMouseEvent+0xcb)[0x7f5af24796eb]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(_ZN7QWidget5eventEP6QEvent+0x1e7)[0x7f5af2305947]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(_ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent+0x9b)[0x7f5af22c705b]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(_ZN12QApplication6notifyEP7QObjectP6QEvent+0xf6b)[0x7f5af22cf03b]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN16QCoreApplication15notifyInternal2EP7QObjectP6QEvent+0x107)[0x7f5af2a65a87]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(_ZN19QApplicationPrivate14sendMouseEventEP7QWidgetP11QMouseEventS1_S1_PS1_R8QPointerIS0_Eb+0x1cc)[0x7f5af22cd8fc]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(+0x1eff2d)[0x7f5af231ef2d]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(+0x1f281a)[0x7f5af232181a]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(_ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent+0x9b)[0x7f5af22c705b]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5(_ZN12QApplication6notifyEP7QObjectP6QEvent+0x229)[0x7f5af22ce2f9]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN16QCoreApplication15notifyInternal2EP7QObjectP6QEvent+0x107)[0x7f5af2a65a87]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5(_ZN22QGuiApplicationPrivate17processMouseEventEPN29QWindowSystemInterfacePrivate10MouseEventE+0x6f2)[0x7f5af2ed87b2]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5(_ZN22QGuiApplicationPrivate24processWindowSystemEventEPN29QWindowSystemInterfacePrivate17WindowSystemEventE+0x104)[0x7f5af2eda224]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5(_ZN22QWindowSystemInterface22sendWindowSystemEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0xba)[0x7f5af2eb625a]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_ZN23QUnixEventDispatcherQPA13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x15)[0x215302c5]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libtq.so(_ZN17TqEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x119)[0x7f5af38bb2e9]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libtq.so(+0x180ed)[0x7f5af38b80ed]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(Tcl_DoOneEvent+0xbf)[0x2197eb1f]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libtq.so(_ZN17TqEventDispatcher13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE+0x69)[0x7f5af38bb239]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE+0xe9)[0x7f5af2a640c9]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5(_ZN16QCoreApplication4execEv+0x83)[0x7f5af2a6c953]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libtq.so(_ZN13TqApplication4execEv+0x176)[0x7f5af38ba896]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(_Z12edi_app_initP10Tcl_Interp+0x2a8)[0x4d12f98]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(Tcl_MainEx+0x176)[0x219793c6]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus(main+0x1d1)[0x4354bd1]
+/lib64/libc.so.6(__libc_start_main+0xf4)[0x7f5aee271554]
+/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus[0x4c637ac]
+========================================
+               pstack
+========================================
+Thread 21 (Thread 0x7f5ae4429700 (LWP 13367)):
+#0  0x00007f5aeee589dd in accept () at ../sysdeps/unix/syscall-template.S:81
+#1  0x000000002004beae in ProcessInfo::handleConnection(void*) ()
+#2  0x0000000004f7507a in create_head(void*) ()
+#3  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ae4429700) at pthread_create.c:307
+#4  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 20 (Thread 0x7f5ae3c28700 (LWP 13368)):
+#0  0x00007f5aee344b43 in select () at ../sysdeps/unix/syscall-template.S:81
+#1  0x000000002004408b in ProcessInfo::sampleUsage(void*) ()
+#2  0x0000000004f7507a in create_head(void*) ()
+#3  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ae3c28700) at pthread_create.c:307
+#4  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 19 (Thread 0x7f5ae3427700 (LWP 13389)):
+#0  0x00007f5aee3149fd in nanosleep () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007f5aee314894 in __sleep (seconds=0) at ../sysdeps/unix/sysv/linux/sleep.c:137
+#2  0x0000000013833972 in syiPeakMem(void*) ()
+#3  0x0000000004f7507a in create_head(void*) ()
+#4  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ae3427700) at pthread_create.c:307
+#5  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 18 (Thread 0x7f5ae2c26700 (LWP 13398)):
+#0  0x00007f5aeee58e9d in nanosleep () at ../sysdeps/unix/syscall-template.S:81
+#1  0x000000000640338d in rdaiLicRecheck(void*) ()
+#2  0x0000000004f7507a in create_head(void*) ()
+#3  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ae2c26700) at pthread_create.c:307
+#4  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 17 (Thread 0x7f5ae13e4700 (LWP 13555)):
+#0  0x00007f5aee342ddd in poll () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00007f5aefd4d022 in poll (__timeout=-1, __nfds=1, __fds=0x7f5ae134c710) at /usr/include/bits/poll2.h:46
+#2  _xcb_conn_wait (c=c@entry=0x7f5ae1750000, cond=cond@entry=0x7f5ae1750040, vector=vector@entry=0x0, count=count@entry=0x0) at xcb_conn.c:479
+#3  0x00007f5aefd4ec6f in xcb_wait_for_event (c=0x7f5ae1750000) at xcb_in.c:697
+#4  0x00007f5ae1439a59 in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5XcbQpa.so.5
+#5  0x00007f5af288717a in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#6  0x0000000004f7507a in create_head(void*) ()
+#7  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ae13e4700) at pthread_create.c:307
+#8  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 16 (Thread 0x7f5adaaf9700 (LWP 13681)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007f5ade4290b3 in cnd_wait (mtx=0x7f5ae47250b8, cond=<optimized out>) at ../../../../include/c11/threads_posix.h:155
+#2  pipe_semaphore_wait (sema=0x7f5ae47250b8) at ../../../../src/gallium/auxiliary/os/os_thread.h:108
+#3  thread_function (init_data=init_data@entry=0x7f5ae4725018) at lp_rast.c:805
+#4  0x00007f5ade428c27 in impl_thrd_routine (p=<optimized out>) at ../../../../include/c11/threads_posix.h:87
+#5  0x0000000004f7507a in create_head(void*) ()
+#6  0x00007f5aeee51ea5 in start_thread (arg=0x7f5adaaf9700) at pthread_create.c:307
+#7  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 15 (Thread 0x7f5ada2f8700 (LWP 13682)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007f5ade4290b3 in cnd_wait (mtx=0x7f5ae4725218, cond=<optimized out>) at ../../../../include/c11/threads_posix.h:155
+#2  pipe_semaphore_wait (sema=0x7f5ae4725218) at ../../../../src/gallium/auxiliary/os/os_thread.h:108
+#3  thread_function (init_data=init_data@entry=0x7f5ae4725178) at lp_rast.c:805
+#4  0x00007f5ade428c27 in impl_thrd_routine (p=<optimized out>) at ../../../../include/c11/threads_posix.h:87
+#5  0x0000000004f7507a in create_head(void*) ()
+#6  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ada2f8700) at pthread_create.c:307
+#7  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 14 (Thread 0x7f5ad9af7700 (LWP 13684)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007f5ade4290b3 in cnd_wait (mtx=0x7f5ae4725378, cond=<optimized out>) at ../../../../include/c11/threads_posix.h:155
+#2  pipe_semaphore_wait (sema=0x7f5ae4725378) at ../../../../src/gallium/auxiliary/os/os_thread.h:108
+#3  thread_function (init_data=init_data@entry=0x7f5ae47252d8) at lp_rast.c:805
+#4  0x00007f5ade428c27 in impl_thrd_routine (p=<optimized out>) at ../../../../include/c11/threads_posix.h:87
+#5  0x0000000004f7507a in create_head(void*) ()
+#6  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ad9af7700) at pthread_create.c:307
+#7  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 13 (Thread 0x7f5ad92f6700 (LWP 13686)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007f5ade4290b3 in cnd_wait (mtx=0x7f5ae47254d8, cond=<optimized out>) at ../../../../include/c11/threads_posix.h:155
+#2  pipe_semaphore_wait (sema=0x7f5ae47254d8) at ../../../../src/gallium/auxiliary/os/os_thread.h:108
+#3  thread_function (init_data=init_data@entry=0x7f5ae4725438) at lp_rast.c:805
+#4  0x00007f5ade428c27 in impl_thrd_routine (p=<optimized out>) at ../../../../include/c11/threads_posix.h:87
+#5  0x0000000004f7507a in create_head(void*) ()
+#6  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ad92f6700) at pthread_create.c:307
+#7  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 12 (Thread 0x7f5ad8af5700 (LWP 13687)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007f5ade4290b3 in cnd_wait (mtx=0x7f5ae4725638, cond=<optimized out>) at ../../../../include/c11/threads_posix.h:155
+#2  pipe_semaphore_wait (sema=0x7f5ae4725638) at ../../../../src/gallium/auxiliary/os/os_thread.h:108
+#3  thread_function (init_data=init_data@entry=0x7f5ae4725598) at lp_rast.c:805
+#4  0x00007f5ade428c27 in impl_thrd_routine (p=<optimized out>) at ../../../../include/c11/threads_posix.h:87
+#5  0x0000000004f7507a in create_head(void*) ()
+#6  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ad8af5700) at pthread_create.c:307
+#7  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 11 (Thread 0x7f5ad82f4700 (LWP 13689)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007f5ade4290b3 in cnd_wait (mtx=0x7f5ae4725798, cond=<optimized out>) at ../../../../include/c11/threads_posix.h:155
+#2  pipe_semaphore_wait (sema=0x7f5ae4725798) at ../../../../src/gallium/auxiliary/os/os_thread.h:108
+#3  thread_function (init_data=init_data@entry=0x7f5ae47256f8) at lp_rast.c:805
+#4  0x00007f5ade428c27 in impl_thrd_routine (p=<optimized out>) at ../../../../include/c11/threads_posix.h:87
+#5  0x0000000004f7507a in create_head(void*) ()
+#6  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ad82f4700) at pthread_create.c:307
+#7  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 10 (Thread 0x7f5ad76ab700 (LWP 13761)):
+#0  0x00007f5aee344b43 in select () at ../sysdeps/unix/syscall-template.S:81
+#1  0x00000000219bcb37 in NotifierThreadProc ()
+#2  0x0000000004f7507a in create_head(void*) ()
+#3  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ad76ab700) at pthread_create.c:307
+#4  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 9 (Thread 0x7f5ad6707700 (LWP 14228)):
+#0  0x00007f5aeee593c1 in do_sigwait (sig=0x7f5ad666f804, set=<optimized out>) at ../sysdeps/unix/sysv/linux/sigwait.c:60
+#1  __sigwait (set=0x7f5ad666f810, sig=0x7f5ad666f804) at ../sysdeps/unix/sysv/linux/sigwait.c:95
+#2  0x0000000004c6415f in ctrlCHandle(void*) ()
+#3  0x0000000004f7507a in create_head(void*) ()
+#4  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ad6707700) at pthread_create.c:307
+#5  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 8 (Thread 0x7f5aba429700 (LWP 26399)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007f5af2887fbb in QWaitCondition::wait(QMutex*, unsigned long) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#2  0x00007f5af24d3e22 in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#3  0x00007f5af288717a in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#4  0x0000000004f7507a in create_head(void*) ()
+#5  0x00007f5aeee51ea5 in start_thread (arg=0x7f5aba429700) at pthread_create.c:307
+#6  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 7 (Thread 0x7f5ab2217700 (LWP 6884)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00000000212ffc08 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000212ffddf in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000004f7507a in create_head(void*) ()
+#4  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ab2217700) at pthread_create.c:307
+#5  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 6 (Thread 0x7f5ab4018700 (LWP 6892)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00000000212ffc08 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000212ffddf in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000004f7507a in create_head(void*) ()
+#4  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ab4018700) at pthread_create.c:307
+#5  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 5 (Thread 0x7f5ab4819700 (LWP 6893)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00000000212ffc08 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000212ffddf in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000004f7507a in create_head(void*) ()
+#4  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ab4819700) at pthread_create.c:307
+#5  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 4 (Thread 0x7f5ab501a700 (LWP 6894)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00000000212ffc08 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000212ffddf in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000004f7507a in create_head(void*) ()
+#4  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ab501a700) at pthread_create.c:307
+#5  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 3 (Thread 0x7f5a9e675700 (LWP 32175)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x00007f5af6d351fc in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libstdc++.so.6
+#2  0x000000000af5eeba in spThread::spThreadPool::Worker<void>::loop() ()
+#3  0x00007f5af6d3ab8f in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libstdc++.so.6
+#4  0x0000000004f7507a in create_head(void*) ()
+#5  0x00007f5aeee51ea5 in start_thread (arg=0x7f5a9e675700) at pthread_create.c:307
+#6  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 2 (Thread 0x7f5a96e6d700 (LWP 678)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+#1  0x000000000bc1ca73 in npiThrdCostGradWR_wkrThrd(void*) ()
+#2  0x0000000004f7507a in create_head(void*) ()
+#3  0x00007f5aeee51ea5 in start_thread (arg=0x7f5a96e6d700) at pthread_create.c:307
+#4  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+Thread 1 (Thread 0x7f5af805fcc0 (LWP 12956)):
+#0  0x00007f5aee314659 in __libc_waitpid (pid=2696, stat_loc=stat_loc@entry=0x7ffd029cde80, options=options@entry=0) at ../sysdeps/unix/sysv/linux/waitpid.c:40
+#1  0x00007f5aee291f62 in do_system (line=line@entry=0x7ffd029d2010 "/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/etc/innovus/.pstk /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus 12956 1") at ../sysdeps/posix/system.c:148
+#2  0x00007f5aee292311 in __libc_system (line=0x7ffd029d2010 "/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/etc/innovus/.pstk /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus 12956 1") at ../sysdeps/posix/system.c:189
+#3  0x00000000138198b0 in syStackTraceDump(_IO_FILE*, bool) ()
+#4  0x0000000013819d08 in syStackTrace ()
+#5  0x0000000004c66a84 in rdaiErrorHandler(int, siginfo*, void*) ()
+#6  <signal handler called>
+#7  0x000000000d12aa09 in pesPreRouteRCInterface::getNDRExtCapPerUnitLen(int, int, bool, char*, std::vector<double, std::allocator<double> > const&, int, bool, eeExtraInfo const*) ()
+#8  0x000000000d12c130 in pesPreRouteRCInterface::getNDRExtCapPerUnitLenForLIE(int, int, bool, char*, std::vector<double, std::allocator<double> > const&, int, bool, bool, eeExtraInfo const*) ()
+#9  0x0000000007817e18 in oiLibAnalyzer::getNdrAwareParasitic(dbsExtRule*, int, tosRcCorner*, double&, double&, double, bool) [clone .constprop.1879] ()
+#10 0x0000000007821db7 in oiRTLengthPredictionManager::getBestAreaPsPerMM(oiNdrLayerRules&, double&, double&, double&, double&) ()
+#11 0x0000000007821ef6 in oiRTLengthPredictionManager::initAreaPsPerMmData() ()
+#12 0x000000000783955b in oiLibAnalyzer::init() ()
+#13 0x000000000783a42f in oiLibAnalyzer::oiLibAnalyzer() ()
+#14 0x000000000783a6a0 in oiLibAnalyzer::get() ()
+#15 0x0000000004eeefd9 in rdaOptDesignCL::reInit(bool) ()
+#16 0x0000000004efd2b0 in rdaOptDesignCL::rdaOptDesignCL(Tcl_Interp*, int, char**, tcmCmd*) ()
+#17 0x0000000004f15cdb in rdaiOptDesign(void*, Tcl_Interp*, int, char**) ()
+#18 0x0000000015b84a67 in tcmBaseCmd::execute(Tcl_Interp*, int, char**) ()
+#19 0x0000000015b78613 in tcmMgr::cmdParser(void*, Tcl_Interp*, int, char**) ()
+#20 0x00000000218b56e0 in TclInvokeStringCommand ()
+#21 0x00000000218ba057 in TclNRRunCallbacks ()
+#22 0x00000000218bc528 in TclEvalEx ()
+#23 0x00000000218bce56 in Tcl_EvalEx ()
+#24 0x00000000218bce75 in Tcl_Eval ()
+#25 0x0000000004f15746 in rdaiOptDesign(void*, Tcl_Interp*, int, char**) ()
+#26 0x0000000015b84a67 in tcmBaseCmd::execute(Tcl_Interp*, int, char**) ()
+#27 0x0000000015b78613 in tcmMgr::cmdParser(void*, Tcl_Interp*, int, char**) ()
+#28 0x00000000218b56e0 in TclInvokeStringCommand ()
+#29 0x00000000218ba057 in TclNRRunCallbacks ()
+#30 0x00000000218bc528 in TclEvalEx ()
+#31 0x0000000021985122 in TclSubstTokens ()
+#32 0x00000000218bc135 in TclEvalEx ()
+#33 0x00000000218bce56 in Tcl_EvalEx ()
+#34 0x00000000218bce75 in Tcl_Eval ()
+#35 0x0000000011f3ead5 in qtfTclEval(char*, bool, bool) ()
+#36 0x0000000011ee4e56 in qtfsItem::fUpdateVar() ()
+#37 0x00007f5af2a90ebf in QMetaObject::activate(QObject*, int, int, void**) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#38 0x00007f5af2478042 in QAbstractButton::clicked(bool) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#39 0x00007f5af2478254 in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#40 0x00007f5af2479542 in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#41 0x00007f5af24796ec in QAbstractButton::mouseReleaseEvent(QMouseEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#42 0x00007f5af2305948 in QWidget::event(QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#43 0x00007f5af22c705c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#44 0x00007f5af22cf03c in QApplication::notify(QObject*, QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#45 0x00007f5af2a65a88 in QCoreApplication::notifyInternal2(QObject*, QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#46 0x00007f5af22cd8fd in QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#47 0x00007f5af231ef2e in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#48 0x00007f5af232181b in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#49 0x00007f5af22c705c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#50 0x00007f5af22ce2fa in QApplication::notify(QObject*, QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#51 0x00007f5af2a65a88 in QCoreApplication::notifyInternal2(QObject*, QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#52 0x00007f5af2ed87b3 in QGuiApplicationPrivate::processMouseEvent(QWindowSystemInterfacePrivate::MouseEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5
+#53 0x00007f5af2eda225 in QGuiApplicationPrivate::processWindowSystemEvent(QWindowSystemInterfacePrivate::WindowSystemEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5
+#54 0x00007f5af2eb625b in QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5
+#55 0x00000000215302c6 in QUnixEventDispatcherQPA::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) ()
+#56 0x00007f5af38bb2ea in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libtq.so
+#57 0x00007f5af38b80ee in tcl_dispatch_qt () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libtq.so
+#58 0x000000002197eb20 in Tcl_DoOneEvent ()
+#59 0x00007f5af38bb23a in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libtq.so
+#60 0x00007f5af2a640ca in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#61 0x00007f5af2a6c954 in QCoreApplication::exec() () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#62 0x00007f5af38ba897 in TqApplication::exec() () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libtq.so
+#63 0x0000000004d12f99 in edi_app_init(Tcl_Interp*) ()
+#64 0x00000000219793c7 in Tcl_MainEx ()
+#65 0x0000000004354bd2 in main ()
+========================================
+                gdb
+========================================
+Using: gdb
+[New LWP 678]
+[New LWP 32175]
+[New LWP 6894]
+[New LWP 6893]
+[New LWP 6892]
+[New LWP 6884]
+[New LWP 26399]
+[New LWP 14228]
+[New LWP 13761]
+[New LWP 13689]
+[New LWP 13687]
+[New LWP 13686]
+[New LWP 13684]
+[New LWP 13682]
+[New LWP 13681]
+[New LWP 13555]
+[New LWP 13398]
+[New LWP 13389]
+[New LWP 13368]
+[New LWP 13367]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+
+warning: the debug information found in "/usr/lib/debug//lib64/libexpat.so.1.6.0.debug" does not match "/lib64/libexpat.so.1" (CRC mismatch).
+
+
+warning: the debug information found in "/usr/lib/debug/usr/lib64/libexpat.so.1.6.0.debug" does not match "/lib64/libexpat.so.1" (CRC mismatch).
+
+
+warning: the debug information found in "/usr/lib/debug//usr/lib64/libexpat.so.1.6.0.debug" does not match "/lib64/libexpat.so.1" (CRC mismatch).
+
+
+warning: the debug information found in "/usr/lib/debug/usr/lib64//libexpat.so.1.6.0.debug" does not match "/lib64/libexpat.so.1" (CRC mismatch).
+
+
+warning: the debug information found in "/usr/lib/debug//lib64/libfreebl3.so.debug" does not match "/lib64/libfreebl3.so" (CRC mismatch).
+
+
+warning: the debug information found in "/usr/lib/debug/usr/lib64/libfreebl3.so.debug" does not match "/lib64/libfreebl3.so" (CRC mismatch).
+
+Missing separate debuginfo for /lib64/libtiff.so.3
+Try: yum --enablerepo='*debug*' install /usr/lib/debug/.build-id/43/abf97c85c4acbe7a3e2a7f94a0c18af7335e55.debug
+0x00007f5aee314659 in __libc_waitpid (pid=2696, stat_loc=stat_loc@entry=0x7ffd029cde80, options=options@entry=0) at ../sysdeps/unix/sysv/linux/waitpid.c:40
+40	  int result = INLINE_SYSCALL (wait4, 4, pid, stat_loc, options, NULL);
+
+Thread 21 (Thread 0x7f5ae4429700 (LWP 13367)):
+#0  0x00007f5aeee589dd in accept () at ../sysdeps/unix/syscall-template.S:81
+No locals.
+#1  0x000000002004beae in ProcessInfo::handleConnection(void*) ()
+#2  0x0000000004f7507a in create_head(void*) ()
+#3  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ae4429700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ae4429700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140028353353472, -666513425215242792, 0, 8392704, 4, 140028353353472, 609632880796384728, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#4  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 20 (Thread 0x7f5ae3c28700 (LWP 13368)):
+#0  0x00007f5aee344b43 in select () at ../sysdeps/unix/syscall-template.S:81
+No locals.
+#1  0x000000002004408b in ProcessInfo::sampleUsage(void*) ()
+#2  0x0000000004f7507a in create_head(void*) ()
+#3  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ae3c28700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ae3c28700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140028344960768, -666513425215242792, 0, 8392704, 4, 140028344960768, 609629582798372312, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#4  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 19 (Thread 0x7f5ae3427700 (LWP 13389)):
+#0  0x00007f5aee3149fd in nanosleep () at ../sysdeps/unix/syscall-template.S:81
+No locals.
+#1  0x00007f5aee314894 in __sleep (seconds=0) at ../sysdeps/unix/sysv/linux/sleep.c:137
+        ts = {tv_sec = 5, tv_nsec = 253854382}
+        set = {__val = {65536, 0 <repeats 15 times>}}
+        oset = {__val = {0, 3543892497278398063, 3314660527794566702, 7454983988420020784, 4611697492217458281, 0, 4643638719683756032, 140028519416530, 140028335945184, 140028335945032, 0, 140028335945032, 0, 140028335945184, 0, 140028335945192}}
+        result = <optimized out>
+#2  0x0000000013833972 in syiPeakMem(void*) ()
+#3  0x0000000004f7507a in create_head(void*) ()
+#4  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ae3427700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ae3427700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140028336568064, -666513425215242792, 0, 8392704, 4, 140028336568064, 609630697879256536, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#5  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 18 (Thread 0x7f5ae2c26700 (LWP 13398)):
+#0  0x00007f5aeee58e9d in nanosleep () at ../sysdeps/unix/syscall-template.S:81
+No locals.
+#1  0x000000000640338d in rdaiLicRecheck(void*) ()
+#2  0x0000000004f7507a in create_head(void*) ()
+#3  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ae2c26700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ae2c26700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140028328175360, -666513425215242792, 0, 8392704, 4, 140028328175360, 609627399881244120, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#4  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 17 (Thread 0x7f5ae13e4700 (LWP 13555)):
+#0  0x00007f5aee342ddd in poll () at ../sysdeps/unix/syscall-template.S:81
+No locals.
+#1  0x00007f5aefd4d022 in poll (__timeout=-1, __nfds=1, __fds=0x7f5ae134c710) at /usr/include/bits/poll2.h:46
+No locals.
+#2  _xcb_conn_wait (c=c@entry=0x7f5ae1750000, cond=cond@entry=0x7f5ae1750040, vector=vector@entry=0x0, count=count@entry=0x0) at xcb_conn.c:479
+        ret = <optimized out>
+        fd = {fd = 17, events = 1, revents = 0}
+#3  0x00007f5aefd4ec6f in xcb_wait_for_event (c=0x7f5ae1750000) at xcb_in.c:697
+        ret = 0x0
+#4  0x00007f5ae1439a59 in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5XcbQpa.so.5
+#5  0x00007f5af288717a in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#6  0x0000000004f7507a in create_head(void*) ()
+#7  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ae13e4700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ae13e4700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140028302739200, -666513425215242792, 0, 8392704, 4, 140028302739200, 609626402375089624, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#8  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 16 (Thread 0x7f5adaaf9700 (LWP 13681)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f5ade4290b3 in cnd_wait (mtx=0x7f5ae47250b8, cond=<optimized out>) at ../../../../include/c11/threads_posix.h:155
+No locals.
+#2  pipe_semaphore_wait (sema=0x7f5ae47250b8) at ../../../../src/gallium/auxiliary/os/os_thread.h:108
+No locals.
+#3  thread_function (init_data=init_data@entry=0x7f5ae4725018) at lp_rast.c:805
+        task = 0x7f5ae4725018
+        rast = 0x7f5ae4725000
+        thread_name = "llvmpipe-0\000\004\000\000\000"
+        fpstate = <optimized out>
+#4  0x00007f5ade428c27 in impl_thrd_routine (p=<optimized out>) at ../../../../include/c11/threads_posix.h:87
+        pack = {func = 0x7f5ade429000 <thread_function>, arg = 0x7f5ae4725018}
+#5  0x0000000004f7507a in create_head(void*) ()
+#6  0x00007f5aeee51ea5 in start_thread (arg=0x7f5adaaf9700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5adaaf9700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140028192724736, -666513425215242792, 0, 8392704, 4, 140028192724736, 609574598090178008, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#7  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 15 (Thread 0x7f5ada2f8700 (LWP 13682)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f5ade4290b3 in cnd_wait (mtx=0x7f5ae4725218, cond=<optimized out>) at ../../../../include/c11/threads_posix.h:155
+No locals.
+#2  pipe_semaphore_wait (sema=0x7f5ae4725218) at ../../../../src/gallium/auxiliary/os/os_thread.h:108
+No locals.
+#3  thread_function (init_data=init_data@entry=0x7f5ae4725178) at lp_rast.c:805
+        task = 0x7f5ae4725178
+        rast = 0x7f5ae4725000
+        thread_name = "llvmpipe-1\000\004\000\000\000"
+        fpstate = <optimized out>
+#4  0x00007f5ade428c27 in impl_thrd_routine (p=<optimized out>) at ../../../../include/c11/threads_posix.h:87
+        pack = {func = 0x7f5ade429000 <thread_function>, arg = 0x7f5ae4725178}
+#5  0x0000000004f7507a in create_head(void*) ()
+#6  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ada2f8700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ada2f8700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140028184332032, -666513425215242792, 0, 8392704, 4, 140028184332032, 609575698138676696, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#7  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 14 (Thread 0x7f5ad9af7700 (LWP 13684)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f5ade4290b3 in cnd_wait (mtx=0x7f5ae4725378, cond=<optimized out>) at ../../../../include/c11/threads_posix.h:155
+No locals.
+#2  pipe_semaphore_wait (sema=0x7f5ae4725378) at ../../../../src/gallium/auxiliary/os/os_thread.h:108
+No locals.
+#3  thread_function (init_data=init_data@entry=0x7f5ae47252d8) at lp_rast.c:805
+        task = 0x7f5ae47252d8
+        rast = 0x7f5ae4725000
+        thread_name = "llvmpipe-2\000\004\000\000\000"
+        fpstate = <optimized out>
+#4  0x00007f5ade428c27 in impl_thrd_routine (p=<optimized out>) at ../../../../include/c11/threads_posix.h:87
+        pack = {func = 0x7f5ade429000 <thread_function>, arg = 0x7f5ae47252d8}
+#5  0x0000000004f7507a in create_head(void*) ()
+#6  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ad9af7700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ad9af7700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140028175939328, -666513425215242792, 0, 8392704, 4, 140028175939328, 609572380813311448, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#7  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 13 (Thread 0x7f5ad92f6700 (LWP 13686)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f5ade4290b3 in cnd_wait (mtx=0x7f5ae47254d8, cond=<optimized out>) at ../../../../include/c11/threads_posix.h:155
+No locals.
+#2  pipe_semaphore_wait (sema=0x7f5ae47254d8) at ../../../../src/gallium/auxiliary/os/os_thread.h:108
+No locals.
+#3  thread_function (init_data=init_data@entry=0x7f5ae4725438) at lp_rast.c:805
+        task = 0x7f5ae4725438
+        rast = 0x7f5ae4725000
+        thread_name = "llvmpipe-3\000\004\000\000\000"
+        fpstate = <optimized out>
+#4  0x00007f5ade428c27 in impl_thrd_routine (p=<optimized out>) at ../../../../include/c11/threads_posix.h:87
+        pack = {func = 0x7f5ade429000 <thread_function>, arg = 0x7f5ae4725438}
+#5  0x0000000004f7507a in create_head(void*) ()
+#6  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ad92f6700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ad92f6700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140028167546624, -666513425215242792, 0, 8392704, 4, 140028167546624, 609573480861810136, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#7  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 12 (Thread 0x7f5ad8af5700 (LWP 13687)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f5ade4290b3 in cnd_wait (mtx=0x7f5ae4725638, cond=<optimized out>) at ../../../../include/c11/threads_posix.h:155
+No locals.
+#2  pipe_semaphore_wait (sema=0x7f5ae4725638) at ../../../../src/gallium/auxiliary/os/os_thread.h:108
+No locals.
+#3  thread_function (init_data=init_data@entry=0x7f5ae4725598) at lp_rast.c:805
+        task = 0x7f5ae4725598
+        rast = 0x7f5ae4725000
+        thread_name = "llvmpipe-4\000\004\000\000\000"
+        fpstate = <optimized out>
+#4  0x00007f5ade428c27 in impl_thrd_routine (p=<optimized out>) at ../../../../include/c11/threads_posix.h:87
+        pack = {func = 0x7f5ade429000 <thread_function>, arg = 0x7f5ae4725598}
+#5  0x0000000004f7507a in create_head(void*) ()
+#6  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ad8af5700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ad8af5700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140028159153920, -666513425215242792, 0, 8392704, 4, 140028159153920, 609570180716314072, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#7  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 11 (Thread 0x7f5ad82f4700 (LWP 13689)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f5ade4290b3 in cnd_wait (mtx=0x7f5ae4725798, cond=<optimized out>) at ../../../../include/c11/threads_posix.h:155
+No locals.
+#2  pipe_semaphore_wait (sema=0x7f5ae4725798) at ../../../../src/gallium/auxiliary/os/os_thread.h:108
+No locals.
+#3  thread_function (init_data=init_data@entry=0x7f5ae47256f8) at lp_rast.c:805
+        task = 0x7f5ae47256f8
+        rast = 0x7f5ae4725000
+        thread_name = "llvmpipe-5\000\004\000\000\000"
+        fpstate = <optimized out>
+#4  0x00007f5ade428c27 in impl_thrd_routine (p=<optimized out>) at ../../../../include/c11/threads_posix.h:87
+        pack = {func = 0x7f5ade429000 <thread_function>, arg = 0x7f5ae47256f8}
+#5  0x0000000004f7507a in create_head(void*) ()
+#6  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ad82f4700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ad82f4700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140028150761216, -666513425215242792, 0, 8392704, 4, 140028150761216, 609571280764812760, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#7  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 10 (Thread 0x7f5ad76ab700 (LWP 13761)):
+#0  0x00007f5aee344b43 in select () at ../sysdeps/unix/syscall-template.S:81
+No locals.
+#1  0x00000000219bcb37 in NotifierThreadProc ()
+#2  0x0000000004f7507a in create_head(void*) ()
+#3  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ad76ab700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ad76ab700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140028137879296, -666513425215242792, 0, 8392704, 4, 140028137879296, 609603676092513752, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#4  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 9 (Thread 0x7f5ad6707700 (LWP 14228)):
+#0  0x00007f5aeee593c1 in do_sigwait (sig=0x7f5ad666f804, set=<optimized out>) at ../sysdeps/unix/sysv/linux/sigwait.c:60
+        __arg4 = 8
+        __arg2 = 0
+        _a3 = 0
+        _a1 = 140028120856592
+        resultvar = <optimized out>
+        __arg3 = 0
+        __arg1 = 140028120856592
+        _a4 = 8
+        _a2 = 0
+        ret = <optimized out>
+        tmpset = {__val = {4294886224, 4294886199, 13599952811394841983, 14033993809767416683, 140028121792512, 140028121800704, 867999520, 8192, 8192, 0, 140028121478912, 571064739, 140028464611648, 140028121478912, 2, 140028141554688}}
+#1  __sigwait (set=0x7f5ad666f810, sig=0x7f5ad666f804) at ../sysdeps/unix/sysv/linux/sigwait.c:95
+        oldtype = 0
+        result = 128
+#2  0x0000000004c6415f in ctrlCHandle(void*) ()
+#3  0x0000000004f7507a in create_head(void*) ()
+#4  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ad6707700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ad6707700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140028121478912, -666513425215242792, 0, 8392704, 4, 140028121478912, 609601543641251288, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#5  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 8 (Thread 0x7f5aba429700 (LWP 26399)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f5af2887fbb in QWaitCondition::wait(QMutex*, unsigned long) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#2  0x00007f5af24d3e22 in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#3  0x00007f5af288717a in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#4  0x0000000004f7507a in create_head(void*) ()
+#5  0x00007f5aeee51ea5 in start_thread (arg=0x7f5aba429700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5aba429700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140027648710400, -666513425215242792, 1, 8392704, 4, 140027648710400, 609505337447562712, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#6  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 7 (Thread 0x7f5ab2217700 (LWP 6884)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00000000212ffc08 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000212ffddf in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000004f7507a in create_head(void*) ()
+#4  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ab2217700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ab2217700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140027512321792, -666513425215242792, 0, 8392704, 7, 140027512321792, 609522782530977240, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#5  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 6 (Thread 0x7f5ab4018700 (LWP 6892)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00000000212ffc08 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000212ffddf in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000004f7507a in create_head(void*) ()
+#4  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ab4018700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ab4018700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140027543783168, -666513425215242792, 0, 8392704, 7, 140027543783168, 609523488516226520, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#5  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 5 (Thread 0x7f5ab4819700 (LWP 6893)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00000000212ffc08 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000212ffddf in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000004f7507a in create_head(void*) ()
+#4  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ab4819700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ab4819700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140027552175872, -666513425215242792, 0, 8392704, 7, 140027552175872, 609526786514238936, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#5  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 4 (Thread 0x7f5ab501a700 (LWP 6894)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00000000212ffc08 in CRL::Threading::ThreadPoolBase::thread(unsigned int) ()
+#2  0x00000000212ffddf in CRL::Threading::ThreadPoolBase::thread(void*) ()
+#3  0x0000000004f7507a in create_head(void*) ()
+#4  0x00007f5aeee51ea5 in start_thread (arg=0x7f5ab501a700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5ab501a700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140027560568576, -666513425215242792, 0, 8392704, 7, 140027560568576, 609525688613223896, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#5  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 3 (Thread 0x7f5a9e675700 (LWP 32175)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x00007f5af6d351fc in std::condition_variable::wait(std::unique_lock<std::mutex>&) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libstdc++.so.6
+#2  0x000000000af5eeba in spThread::spThreadPool::Worker<void>::loop() ()
+#3  0x00007f5af6d3ab8f in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libstdc++.so.6
+#4  0x0000000004f7507a in create_head(void*) ()
+#5  0x00007f5aeee51ea5 in start_thread (arg=0x7f5a9e675700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5a9e675700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140027181356800, -666513425215242792, 0, 8392704, 4, 140027181356800, 609442980964875736, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#6  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 2 (Thread 0x7f5a96e6d700 (LWP 678)):
+#0  pthread_cond_wait@@GLIBC_2.3.2 () at ../nptl/sysdeps/unix/sysv/linux/x86_64/pthread_cond_wait.S:185
+No locals.
+#1  0x000000000bc1ca73 in npiThrdCostGradWR_wkrThrd(void*) ()
+#2  0x0000000004f7507a in create_head(void*) ()
+#3  0x00007f5aeee51ea5 in start_thread (arg=0x7f5a96e6d700) at pthread_create.c:307
+        __res = <optimized out>
+        pd = 0x7f5a96e6d700
+        now = <optimized out>
+        unwind_buf = {cancel_jmp_buf = {{jmp_buf = {140027055494912, -666513425215242792, 0, 8392704, 7, 140027055494912, 609459469344325080, 609618003056541144}, mask_was_saved = 0}}, priv = {pad = {0x0, 0x0, 0x0, 0x0}, data = {prev = 0x0, cleanup = 0x0, canceltype = 0}}}
+        not_first_call = <optimized out>
+        pagesize_m1 = <optimized out>
+        sp = <optimized out>
+        freesize = <optimized out>
+#4  0x00007f5aee34db0d in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:111
+No locals.
+
+Thread 1 (Thread 0x7f5af805fcc0 (LWP 12956)):
+#0  0x00007f5aee314659 in __libc_waitpid (pid=2696, stat_loc=stat_loc@entry=0x7ffd029cde80, options=options@entry=0) at ../sysdeps/unix/sysv/linux/waitpid.c:40
+        resultvar = <optimized out>
+        oldtype = 0
+        result = <optimized out>
+#1  0x00007f5aee291f62 in do_system (line=line@entry=0x7ffd029d2010 "/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/etc/innovus/.pstk /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus 12956 1") at ../sysdeps/posix/system.c:148
+        __result = <optimized out>
+        _buffer = {__routine = 0x7f5aee292200 <cancel_handler>, __arg = 0x7ffd029cde50, __canceltype = 1, __prev = 0x0}
+        _avail = 1
+        status = 43835200
+        save = <optimized out>
+        pid = 2696
+        sa = {__sigaction_handler = {sa_handler = 0x1, sa_sigaction = 0x1}, sa_mask = {__val = {65536, 0 <repeats 15 times>}}, sa_flags = 0, sa_restorer = 0x7ffd029cdf04}
+        omask = {__val = {1026, 8589934592, 140724647289368, 0, 140724647288640, 140724647288608, 140728898420735, 4, 5, 140028523131968, 0, 2, 7004617186148876280, 140028464655872, 140027697263168, 32}}
+#2  0x00007f5aee292311 in __libc_system (line=0x7ffd029d2010 "/eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/etc/innovus/.pstk /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/innovus/bin/64bit/innovus 12956 1") at ../sysdeps/posix/system.c:189
+        oldtype = 0
+        result = <optimized out>
+#3  0x00000000138198b0 in syStackTraceDump(_IO_FILE*, bool) ()
+#4  0x0000000013819d08 in syStackTrace ()
+#5  0x0000000004c66a84 in rdaiErrorHandler(int, siginfo*, void*) ()
+#6  <signal handler called>
+No locals.
+#7  0x000000000d12aa09 in pesPreRouteRCInterface::getNDRExtCapPerUnitLen(int, int, bool, char*, std::vector<double, std::allocator<double> > const&, int, bool, eeExtraInfo const*) ()
+#8  0x000000000d12c130 in pesPreRouteRCInterface::getNDRExtCapPerUnitLenForLIE(int, int, bool, char*, std::vector<double, std::allocator<double> > const&, int, bool, bool, eeExtraInfo const*) ()
+#9  0x0000000007817e18 in oiLibAnalyzer::getNdrAwareParasitic(dbsExtRule*, int, tosRcCorner*, double&, double&, double, bool) [clone .constprop.1879] ()
+#10 0x0000000007821db7 in oiRTLengthPredictionManager::getBestAreaPsPerMM(oiNdrLayerRules&, double&, double&, double&, double&) ()
+#11 0x0000000007821ef6 in oiRTLengthPredictionManager::initAreaPsPerMmData() ()
+#12 0x000000000783955b in oiLibAnalyzer::init() ()
+#13 0x000000000783a42f in oiLibAnalyzer::oiLibAnalyzer() ()
+#14 0x000000000783a6a0 in oiLibAnalyzer::get() ()
+#15 0x0000000004eeefd9 in rdaOptDesignCL::reInit(bool) ()
+#16 0x0000000004efd2b0 in rdaOptDesignCL::rdaOptDesignCL(Tcl_Interp*, int, char**, tcmCmd*) ()
+#17 0x0000000004f15cdb in rdaiOptDesign(void*, Tcl_Interp*, int, char**) ()
+#18 0x0000000015b84a67 in tcmBaseCmd::execute(Tcl_Interp*, int, char**) ()
+#19 0x0000000015b78613 in tcmMgr::cmdParser(void*, Tcl_Interp*, int, char**) ()
+#20 0x00000000218b56e0 in TclInvokeStringCommand ()
+#21 0x00000000218ba057 in TclNRRunCallbacks ()
+#22 0x00000000218bc528 in TclEvalEx ()
+#23 0x00000000218bce56 in Tcl_EvalEx ()
+#24 0x00000000218bce75 in Tcl_Eval ()
+#25 0x0000000004f15746 in rdaiOptDesign(void*, Tcl_Interp*, int, char**) ()
+#26 0x0000000015b84a67 in tcmBaseCmd::execute(Tcl_Interp*, int, char**) ()
+#27 0x0000000015b78613 in tcmMgr::cmdParser(void*, Tcl_Interp*, int, char**) ()
+#28 0x00000000218b56e0 in TclInvokeStringCommand ()
+#29 0x00000000218ba057 in TclNRRunCallbacks ()
+#30 0x00000000218bc528 in TclEvalEx ()
+#31 0x0000000021985122 in TclSubstTokens ()
+#32 0x00000000218bc135 in TclEvalEx ()
+#33 0x00000000218bce56 in Tcl_EvalEx ()
+#34 0x00000000218bce75 in Tcl_Eval ()
+#35 0x0000000011f3ead5 in qtfTclEval(char*, bool, bool) ()
+#36 0x0000000011ee4e56 in qtfsItem::fUpdateVar() ()
+#37 0x00007f5af2a90ebf in QMetaObject::activate(QObject*, int, int, void**) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#38 0x00007f5af2478042 in QAbstractButton::clicked(bool) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#39 0x00007f5af2478254 in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#40 0x00007f5af2479542 in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#41 0x00007f5af24796ec in QAbstractButton::mouseReleaseEvent(QMouseEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#42 0x00007f5af2305948 in QWidget::event(QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#43 0x00007f5af22c705c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#44 0x00007f5af22cf03c in QApplication::notify(QObject*, QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#45 0x00007f5af2a65a88 in QCoreApplication::notifyInternal2(QObject*, QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#46 0x00007f5af22cd8fd in QApplicationPrivate::sendMouseEvent(QWidget*, QMouseEvent*, QWidget*, QWidget*, QWidget**, QPointer<QWidget>&, bool) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#47 0x00007f5af231ef2e in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#48 0x00007f5af232181b in ?? () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#49 0x00007f5af22c705c in QApplicationPrivate::notify_helper(QObject*, QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#50 0x00007f5af22ce2fa in QApplication::notify(QObject*, QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Widgets.so.5
+#51 0x00007f5af2a65a88 in QCoreApplication::notifyInternal2(QObject*, QEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#52 0x00007f5af2ed87b3 in QGuiApplicationPrivate::processMouseEvent(QWindowSystemInterfacePrivate::MouseEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5
+#53 0x00007f5af2eda225 in QGuiApplicationPrivate::processWindowSystemEvent(QWindowSystemInterfacePrivate::WindowSystemEvent*) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5
+#54 0x00007f5af2eb625b in QWindowSystemInterface::sendWindowSystemEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Gui.so.5
+#55 0x00000000215302c6 in QUnixEventDispatcherQPA::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) ()
+#56 0x00007f5af38bb2ea in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libtq.so
+#57 0x00007f5af38b80ee in tcl_dispatch_qt () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libtq.so
+#58 0x000000002197eb20 in Tcl_DoOneEvent ()
+#59 0x00007f5af38bb23a in TqEventDispatcher::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libtq.so
+#60 0x00007f5af2a640ca in QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#61 0x00007f5af2a6c954 in QCoreApplication::exec() () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/Qt/v5//64bit/lib/libcdsQt5Core.so.5
+#62 0x00007f5af38ba897 in TqApplication::exec() () from /eda/cadence/2020-21/RHELx86/INNOVUS_20.11.000/tools.lnx86/lib/64bit/libtq.so
+#63 0x0000000004d12f99 in edi_app_init(Tcl_Interp*) ()
+#64 0x00000000219793c7 in Tcl_MainEx ()
+#65 0x0000000004354bd2 in main ()
+A debugging session is active.
+
+	Inferior 1 [process 12956] will be detached.
+
+Quit anyway? (y or n) [answered Y; input not from terminal]
+[Inferior 1 (process 12956) detached]
+
+*** Memory Usage v#2 (Current mem = 1194.812M, initial mem = 272.285M) ***
+*** Message Summary: 19 warning(s), 8 error(s)
+
+--- Ending "Innovus" (totcpu=0:03:49, real=0:29:18, mem=1194.8M) ---

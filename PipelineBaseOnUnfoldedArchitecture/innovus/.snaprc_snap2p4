@@ -1,0 +1,21 @@
+#----------------------------------------------------------
+# ./.snaprc_snap2p4 : snapshot resource file                          
+# label = snap2p4                                      
+#----------------------------------------------------------
+set tmpstr ""
+set tmpbar ""
+lappend tmpstr "dir" $sdir
+lappend tmpstr "label" snap2p4
+lappend tmpstr "fplan" $sdir/ss_snap2p4.fplan.gif
+lappend tmpstr "amoeba" $sdir/ss_snap2p4.amoeba.gif
+lappend tmpstr "place" $sdir/ss_snap2p4.place.gif
+lappend tmpstr "trgGlbOverflowPctH" 0
+lappend tmpstr "trgGlbOverflowPctV" 0
+lappend tmpbar "Congestion"
+lappend tmpstr "Congestion" 0
+lappend tmpbar WNS
+lappend tmpstr WNS 0.261
+lappend tmpbar TNS
+lappend tmpstr TNS 0.0
+lappend tmpbar Overlap
+lappend tmpstr Overlap 0
